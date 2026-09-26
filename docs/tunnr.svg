@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- tunnr's brand mark, from tunnr-brand::draw_tunnr_logo (light theme) -->
+  <path d="M25.6 230.4 V128 A102.4 102.4 0 0 1 230.4 128 V230.4" fill="none" stroke="#2ea043" stroke-width="22.5"/>
+  <line x1="25.6" y1="230.4" x2="230.4" y2="230.4" stroke="#373737" stroke-width="19.1"/>
+  <circle cx="128" cy="146.4" r="20.5" fill="#2ea043"/>
+</svg>
