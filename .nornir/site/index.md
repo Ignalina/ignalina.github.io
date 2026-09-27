@@ -1,32 +1,35 @@
 # Ignalina ApS
 
-We love the smell of motherboards in the morning, and we do nothing but premium software.
-Our applications are delivered as open source, as SaaS, and as hardware appliances.
+*"We love the smell of motherboards in the morning"* — og vi laver udelukkende premium-software.
+Vi er en rent skandinavisk virksomhed.
+Vores applikationer leveres som open source, som SaaS og som hardware-appliances.
 
-## Products
+**Vores SaaS-løsninger kører på finsk atomkraft.**
 
-![holger](holger.webp "44pt") **[holger](https://codeberg.org/nordisk/holger)** — immutable artifact repository in pure Rust.
-Mirrors from the internet, Nexus or Artifactory into immutable znippy archives for air-gapped sites:
-content-addressed with Blake3, O(1) random file access, 2 MB RSS.
+## Produkter
 
-![znippy](znippy.webp "44pt") **[znippy](https://codeberg.org/nordisk/znippy)** — parallel, random-access archive on Apache Arrow IPC.
-Packs a directory at all-core speed and pulls any single file back without unpacking the rest;
-the index is queryable straight from DuckDB, Polars or DataFusion.
+![holger](holger.webp "44pt") **[holger](https://codeberg.org/nordisk/holger)** — immutable artifact repository i ren Rust.
+Spejler fra internettet, Nexus eller Artifactory til uforanderlige znippy-arkiver til air-gapped miljøer:
+content-addressed med Blake3, O(1) random access til filer, 2 MB RSS.
 
-![gunnar](gunnar.webp "44pt") **[gunnar](https://gunnar.rs)** — Git server in Rust on Apache Arrow.
-Two engines: znippy (Arrow IPC on one machine, or a full Apache Iceberg cluster) or gix on a plain filesystem.
-Built-in geo-replication to a twin; free to host yourself, or hosted at gunnar.rs.
+![znippy](znippy.webp "44pt") **[znippy](https://codeberg.org/nordisk/znippy)** — parallelt arkiv med random access, bygget på Apache Arrow IPC.
+Pakker en mappe med fuld fart på alle kerner og henter en enkelt fil ud uden at pakke resten ud;
+indekset kan forespørges direkte fra DuckDB, Polars eller DataFusion.
 
-![skade](skade.webp "44pt") **[skade](https://codeberg.org/nordisk/skade)** — pure-Rust Apache Iceberg.
-The catalog rests on a static search tree with nanosecond lookups, and embeds in-process as one file;
-catalog reads measured at 492× Nessie and 677× Polaris. SQL through DataFusion.
+![gunnar](gunnar.webp "44pt") **[gunnar](https://gunnar.rs)** — Git-server i Rust på Apache Arrow.
+To motorer: znippy (Arrow IPC på én maskine eller en fuld Apache Iceberg-klynge) eller gix på et almindeligt filsystem.
+Indbygget geo-replikering til en twin; gratis at hoste selv, eller hostet på gunnar.rs.
 
-![korp](korp.webp "44pt") **korp** — one robot-testable egui app over the whole data path.
-Hugin watches now: Spark pipelines, a live FalkorDB graph, ingest. Munin keeps the memory:
-Iceberg time-travel, maps, investigations. Ships as a bootable appliance.
+![skade](skade.webp "44pt") **[skade](https://codeberg.org/nordisk/skade)** — Apache Iceberg i ren Rust.
+Kataloget hviler på et statisk søgetræ med opslag på nanosekunder og kan indlejres in-process som én fil;
+katalog-læsninger målt til 492× Nessie og 677× Polaris. SQL via DataFusion.
 
-![tunnr](tunnr.svg "44pt") **tunnr** — bare-metal appliance framework.
-Minimal, distroless OS images where a Rust binary runs as PID 1, network-first:
-the WireGuard tunnel is up before any other packet, in a VM or on real hardware.
+![korp](korp.webp "44pt") **korp** — én robot-testbar egui-app over hele datavejen.
+Hugin holder øje med nuet: Spark-pipelines, en live FalkorDB-graf, ingest. Munin bærer hukommelsen:
+Iceberg time-travel, kort, efterforskninger. Leveres som en bootbar appliance.
 
-Contact: [rickard@ignalina.dk](mailto:rickard@ignalina.dk)
+![tunnr](tunnr.svg "44pt") **tunnr** — framework til bare-metal appliances.
+Minimale, distroless OS-images, hvor en Rust-binær kører som PID 1, network-first:
+WireGuard-tunnelen er oppe før nogen anden pakke, i en VM eller på rigtig hardware.
+
+Kontakt: [rickard@ignalina.dk](mailto:rickard@ignalina.dk)
