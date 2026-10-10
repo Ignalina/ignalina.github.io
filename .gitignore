@@ -1,4 +1,12 @@
-_site/
-.sass-cache/
-.jekyll-cache/
-.jekyll-metadata
+# Fonts for the typesetter only. `dwarves docs book --format site` reads every
+# .ttf/.otf/.ttc/.otc in .nornir/site/ and sets index.ja.md in Noto Serif CJK JP;
+# the published SVG carries the glyphs as paths, so the font never reaches docs/.
+# Keep them here locally, out of git (they were 54 MB of a 60 MB clone).
+# The faces docs/index.ja.html was last set with:
+#   NotoSerifCJK-Regular.ttc  sha256 5d9c31a059600193c9d7968a998bde886ccdc77e934006ad243b41794c496a7d
+#   NotoSerifCJK-Bold.ttc     sha256 1505ee3b9c0890fae6302ee0e9c6fd74d690f4a55a6ace1d9944f3f6352d622d
+# (Debian's fonts-noto-cjk 1:20230817 ships an older build with other hashes.)
+.nornir/site/*.ttf
+.nornir/site/*.otf
+.nornir/site/*.ttc
+.nornir/site/*.otc
