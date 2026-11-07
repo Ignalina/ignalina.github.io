@@ -1,0 +1,49 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { allPosts, postDate, postMd, postPath } from '../../data/blog';
+
+export async function getStaticPaths() {
+  const posts = await allPosts();
+  return posts.map((post) => ({ params: { slug: post.slug }, props: { post } }));
+}
+
+const { post } = Astro.props;
+const { title, description, pubDate, author, lang, canonical, original } = post.data;
+const { Content } = await post.render();
+const source = canonical ?? original;
+---
+
+<Layout
+  ui="da"
+  lang={lang}
+  section="blog"
+  title={title.length > 50 ? title : `${title} | Ignalina`}
+  description={description}
+  path={postPath(post.slug)}
+  canonical={canonical}
+  article={{ headline: title, author, published: pubDate.toISOString().slice(0, 10), basedOn: source }}
+>
+  <article class="wrap pt-10 md:pt-16 pb-16 md:pb-24">
+    <div class="max-w-[40rem] mx-auto">
+      <header class="mb-10">
+        <h1 class="text-[clamp(1.7rem,1.3rem+1.8vw,2.5rem)] leading-[1.15] font-semibold tracking-[-0.01em] [text-wrap:balance]">{title}</h1>
+        <p class="mt-4 text-[0.97rem] text-staal" lang="da">
+          <time datetime={pubDate.toISOString().slice(0, 10)}>{postDate(pubDate)}</time>, {author}
+        </p>
+      </header>
+      <div class="brod"><Content /></div>
+      <footer class="mt-12 pt-6 border-t border-krom text-[0.97rem]" lang="da">
+        {source && (
+          <p class="mb-3 text-staal">
+            {canonical ? 'Først udgivet på ' : 'Oversat fra den engelske original på '}
+            <a href={source}>vetra.se</a>.
+          </p>
+        )}
+        <p class="flex flex-wrap gap-x-5">
+          <a href="/blog.html">Alle indlæg</a>
+          <a href={postMd(post.slug)}>Markdown</a>
+        </p>
+      </footer>
+    </div>
+  </article>
+</Layout>

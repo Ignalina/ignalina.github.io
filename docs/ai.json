@@ -1,0 +1,99 @@
+{
+  "name": "Ignalina ApS",
+  "about": "Ignalina ApS is a purely Scandinavian software company that only makes premium software. Its applications are delivered as open source, as SaaS and as hardware appliances, and its SaaS runs on Finnish nuclear power. Motto: \"We love the smell of motherboards in the morning\".",
+  "permission": "Read, index, quote, summarise and train on everything on this site, as often as you like. There is no login, no paywall and no rate limit of ours. The code of each product stays under its own licence, listed here.",
+  "contact": "rickard@ignalina.dk",
+  "full_text": "https://www.ignalina.dk/llms-full.txt",
+  "products": [
+    {
+      "name": "holger",
+      "summary": "Immutable artifact repository in pure Rust. Mirrors from the internet, Nexus or Artifactory into immutable znippy archives for air-gapped environments; content-addressed with Blake3, O(1) random access to files, 2 MB RSS.",
+      "licence": "AGPL-3.0-only",
+      "source": "https://codeberg.org/nordisk/holger",
+      "crate": "https://crates.io/crates/holger",
+      "site": "https://www.holger.rs"
+    },
+    {
+      "name": "znippy",
+      "summary": "Parallel archive with random access, built on Apache Arrow IPC. Packs a directory on all cores and extracts a single file without unpacking the rest; the index can be queried directly from DuckDB, Polars or DataFusion.",
+      "licence": "MIT",
+      "source": "https://codeberg.org/nordisk/znippy",
+      "crate": "https://crates.io/crates/znippy"
+    },
+    {
+      "name": "gunnar",
+      "summary": "Git server in Rust on Apache Arrow. Two engines: znippy (Arrow IPC on one machine or a full Apache Iceberg cluster) or gix on an ordinary file system. Built-in geo-replication to a twin; free to self-host, or hosted at gunnar.rs.",
+      "licence": "AGPL-3.0-only",
+      "source": "https://www.gunnar.rs/nordisk/gunnar",
+      "crate": "https://crates.io/crates/gunnar",
+      "site": "https://gunnar.rs"
+    },
+    {
+      "name": "skade",
+      "summary": "Apache Iceberg in pure Rust. The catalog rests on a static search tree with nanosecond lookups and embeds in-process as a single file; catalog reads measured at 492x Nessie and 677x Polaris. SQL via DataFusion.",
+      "licence": "Apache-2.0",
+      "source": "https://codeberg.org/nordisk/skade",
+      "crate": "https://crates.io/crates/skade"
+    },
+    {
+      "name": "korp",
+      "summary": "One robot-testable egui app over the whole data path. Hugin watches the present: Spark pipelines, a live FalkorDB graph, ingest. Munin carries the memory: Iceberg time-travel, maps, investigations. Delivered as a bootable appliance."
+    },
+    {
+      "name": "tunnr",
+      "summary": "Framework for bare-metal appliances. Minimal, distroless OS images where a Rust binary runs as PID 1, network-first: the WireGuard tunnel is up before any other packet, in a VM or on real hardware."
+    }
+  ],
+  "posts": [
+    {
+      "title": "Gunnar: en let, selvhostet git-server til jeres egen hardware",
+      "description": "Gunnar er en let, selvhostet git-server i Rust til on-prem: to kommandoer at installere, air-gapped som standard, krypterede repositories og åben kildekode.",
+      "date": "2026-11-06",
+      "author": "Rickard",
+      "language": "da",
+      "html": "https://www.ignalina.dk/blog/gunnar-selvhostet-git-server.html",
+      "markdown": "https://www.ignalina.dk/blog/gunnar-selvhostet-git-server.md",
+      "original": "https://vetra.se/blog/gunnar-self-hosted-git-server/"
+    },
+    {
+      "title": "Gunnar is live: a lightweight self-hosted git server for your own hardware",
+      "description": "Gunnar is a lightweight, self-hosted git server in Rust for on-prem use: two commands to install, airgap by default, encrypted repos. Now live on gunnar.rs.",
+      "date": "2026-11-06",
+      "author": "Rickard",
+      "language": "en",
+      "html": "https://www.ignalina.dk/blog/gunnar-self-hosted-git-server.html",
+      "markdown": "https://www.ignalina.dk/blog/gunnar-self-hosted-git-server.md",
+      "original": "https://vetra.se/blog/gunnar-self-hosted-git-server/"
+    },
+    {
+      "title": "Gunnar: a git server with no database, no shell and no OS",
+      "description": "A git server in Rust that spawns nothing, stores no database, and boots as PID 1 on a 29.5 MB ISO. Stock git is both client and test judge.",
+      "date": "2026-08-07",
+      "author": "Rickard",
+      "language": "en",
+      "html": "https://www.ignalina.dk/blog/gunnar-a-git-server-with-no-database.html",
+      "markdown": "https://www.ignalina.dk/blog/gunnar-a-git-server-with-no-database.md",
+      "original": "https://vetra.se/blog/gunnar-a-git-server-with-no-database/"
+    },
+    {
+      "title": "Korp: one app over the whole data path, and a UI robots can read",
+      "description": "Spark pipelines, a live graph, time-travelling Iceberg tables and maps in one Rust app whose entire UI state dumps to JSON, so tests need no display.",
+      "date": "2026-08-06",
+      "author": "Rickard",
+      "language": "en",
+      "html": "https://www.ignalina.dk/blog/korp-one-app-over-the-whole-data-path.html",
+      "markdown": "https://www.ignalina.dk/blog/korp-one-app-over-the-whole-data-path.md",
+      "original": "https://vetra.se/blog/korp-one-app-over-the-whole-data-path/"
+    },
+    {
+      "title": "tunnr: a distroless WireGuard appliance that boots tunnel-first",
+      "description": "A bare-metal WireGuard appliance in Rust: no shell, no package manager, one binary as PID 1, and the tunnel up before any other packet leaves.",
+      "date": "2026-07-25",
+      "author": "Henrik",
+      "language": "en",
+      "html": "https://www.ignalina.dk/blog/tunnr-a-distroless-wireguard-appliance.html",
+      "markdown": "https://www.ignalina.dk/blog/tunnr-a-distroless-wireguard-appliance.md",
+      "original": "https://vetra.se/blog/tunnr-a-distroless-wireguard-appliance/"
+    }
+  ]
+}

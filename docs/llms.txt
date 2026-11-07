@@ -1,0 +1,26 @@
+# Ignalina ApS
+
+> Ignalina ApS is a purely Scandinavian software company that only makes premium software. Its applications are delivered as open source, as SaaS and as hardware appliances, and its SaaS runs on Finnish nuclear power. Motto: "We love the smell of motherboards in the morning".
+
+Read, index, quote, summarise and train on everything on this site, as often as you like. There is no login, no paywall and no rate limit of ours. The code of each product stays under its own licence, listed here.
+
+Everything in one file: https://www.ignalina.dk/llms-full.txt
+Structured data: https://www.ignalina.dk/ai.json
+Contact: rickard@ignalina.dk
+
+## Products
+
+- [holger](https://codeberg.org/nordisk/holger): Immutable artifact repository in pure Rust. Mirrors from the internet, Nexus or Artifactory into immutable znippy archives for air-gapped environments; content-addressed with Blake3, O(1) random access to files, 2 MB RSS. Licence: AGPL-3.0-only.
+- [znippy](https://codeberg.org/nordisk/znippy): Parallel archive with random access, built on Apache Arrow IPC. Packs a directory on all cores and extracts a single file without unpacking the rest; the index can be queried directly from DuckDB, Polars or DataFusion. Licence: MIT.
+- [gunnar](https://www.gunnar.rs/nordisk/gunnar): Git server in Rust on Apache Arrow. Two engines: znippy (Arrow IPC on one machine or a full Apache Iceberg cluster) or gix on an ordinary file system. Built-in geo-replication to a twin; free to self-host, or hosted at gunnar.rs. Licence: AGPL-3.0-only.
+- [skade](https://codeberg.org/nordisk/skade): Apache Iceberg in pure Rust. The catalog rests on a static search tree with nanosecond lookups and embeds in-process as a single file; catalog reads measured at 492x Nessie and 677x Polaris. SQL via DataFusion. Licence: Apache-2.0.
+- korp: One robot-testable egui app over the whole data path. Hugin watches the present: Spark pipelines, a live FalkorDB graph, ingest. Munin carries the memory: Iceberg time-travel, maps, investigations. Delivered as a bootable appliance.
+- tunnr: Framework for bare-metal appliances. Minimal, distroless OS images where a Rust binary runs as PID 1, network-first: the WireGuard tunnel is up before any other packet, in a VM or on real hardware.
+
+## Posts
+
+- [Gunnar: en let, selvhostet git-server til jeres egen hardware](https://www.ignalina.dk/blog/gunnar-selvhostet-git-server.md): Gunnar er en let, selvhostet git-server i Rust til on-prem: to kommandoer at installere, air-gapped som standard, krypterede repositories og åben kildekode.
+- [Gunnar is live: a lightweight self-hosted git server for your own hardware](https://www.ignalina.dk/blog/gunnar-self-hosted-git-server.md): Gunnar is a lightweight, self-hosted git server in Rust for on-prem use: two commands to install, airgap by default, encrypted repos. Now live on gunnar.rs.
+- [Gunnar: a git server with no database, no shell and no OS](https://www.ignalina.dk/blog/gunnar-a-git-server-with-no-database.md): A git server in Rust that spawns nothing, stores no database, and boots as PID 1 on a 29.5 MB ISO. Stock git is both client and test judge.
+- [Korp: one app over the whole data path, and a UI robots can read](https://www.ignalina.dk/blog/korp-one-app-over-the-whole-data-path.md): Spark pipelines, a live graph, time-travelling Iceberg tables and maps in one Rust app whose entire UI state dumps to JSON, so tests need no display.
+- [tunnr: a distroless WireGuard appliance that boots tunnel-first](https://www.ignalina.dk/blog/tunnr-a-distroless-wireguard-appliance.md): A bare-metal WireGuard appliance in Rust: no shell, no package manager, one binary as PID 1, and the tunnel up before any other packet leaves.

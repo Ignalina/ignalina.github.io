@@ -1,0 +1,157 @@
+---
+import StickyHeader from '../components/StickyHeader.tsx';
+import { content, langs, type Lang, CONTACT } from '../data/content';
+import '../styles/global.css';
+
+const OG_LOCALE: Record<string, string> = {
+  da: 'da_DK', sv: 'sv_SE', fi: 'fi_FI', is: 'is_IS', ja: 'ja_JP', en: 'en_US',
+};
+
+interface Props {
+  /** Språket som menyer och sidfot visas på. */
+  ui: Lang;
+  /** Sidans eget språk, om det skiljer sig från menyerna. */
+  lang?: string;
+  title: string;
+  description: string;
+  /** Sidans adress, med inledande snedstreck. */
+  path: string;
+  /** Sätts bara på ordagranna kopior; originalet ska ranka. */
+  canonical?: string;
+  /** Språkversioner av samma sida. */
+  alternates?: boolean;
+  /** Vilket menyval sidan hör till. */
+  section?: 'blog';
+  article?: { headline: string; author: string; published: string; basedOn?: string };
+  /** Extra poster i de strukturerade data. */
+  graph?: object[];
+}
+
+const { ui, lang = ui, title, description, path, canonical, alternates = false, section, article, graph = [] } = Astro.props;
+const c = content[ui];
+const siteUrl = 'https://www.ignalina.dk/';
+const pageUrl = new URL(path, siteUrl).href;
+const canonicalUrl = canonical ?? pageUrl;
+const home = c.path === '' ? '/' : `/${c.path}`;
+
+const languages = langs.map((l) => ({
+  lang: l,
+  name: content[l].langName,
+  flag: content[l].flag,
+  href: content[l].path === '' ? '/' : `/${content[l].path}`,
+  current: l === ui && (alternates || lang === ui),
+}));
+
+const links = [
+  { href: `${home}#produkter`, label: c.productsHeading },
+  { href: '/blog.html', label: c.blogLabel, current: section === 'blog' },
+  { href: '#kontakt', label: c.contactLabel },
+];
+
+const ld = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': siteUrl + '#organization',
+      name: 'Ignalina ApS',
+      url: siteUrl,
+      logo: siteUrl + 'icon.png',
+      email: CONTACT,
+      slogan: c.motto,
+      address: { '@type': 'PostalAddress', addressCountry: 'DK' },
+      knowsLanguage: langs,
+    },
+    {
+      '@type': 'WebSite',
+      '@id': siteUrl + '#website',
+      url: siteUrl,
+      name: 'Ignalina ApS',
+      publisher: { '@id': siteUrl + '#organization' },
+    },
+    {
+      '@type': 'WebPage',
+      '@id': canonicalUrl,
+      url: canonicalUrl,
+      name: title,
+      description,
+      isPartOf: { '@id': siteUrl + '#website' },
+      inLanguage: lang,
+    },
+    ...(article
+      ? [{
+          '@type': 'BlogPosting',
+          '@id': `${canonicalUrl}#post`,
+          headline: article.headline,
+          description,
+          datePublished: article.published,
+          dateModified: article.published,
+          inLanguage: lang,
+          author: { '@type': 'Person', name: article.author },
+          publisher: { '@id': siteUrl + '#organization' },
+          mainEntityOfPage: { '@id': canonicalUrl },
+          image: siteUrl + 'art.webp',
+          ...(article.basedOn ? { isBasedOn: article.basedOn } : {}),
+        }]
+      : []),
+    ...graph,
+  ],
+};
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Ignalina" href={siteUrl + 'rss.xml'} />
+    <link rel="alternate" type="text/plain" title="llms.txt" href={siteUrl + 'llms.txt'} />
+    {alternates && langs.map((l) => (
+      <link rel="alternate" hreflang={l} href={siteUrl + content[l].path} />
+    ))}
+    {alternates && <link rel="alternate" hreflang="x-default" href={siteUrl} />}
+    <meta property="og:type" content={article ? 'article' : 'website'} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:site_name" content="Ignalina ApS" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={siteUrl + 'art.webp'} />
+    <meta property="og:image:alt" content={c.artAlt} />
+    <meta property="og:locale" content={OG_LOCALE[lang] ?? 'da_DK'} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="/icon.png" />
+    <link rel="preconnect" href="https://fonts.bunny.net" />
+    <link rel="stylesheet" href="https://fonts.bunny.net/css?family=michroma:400|source-serif-4:400,400i,600&display=swap" />
+    <script type="application/ld+json" set:html={JSON.stringify(ld)} />
+  </head>
+  <body class="min-h-screen flex flex-col">
+    <a class="hopp" href="#indhold">{c.skipLabel}</a>
+    <StickyHeader
+      client:load
+      homeHref={home}
+      links={links}
+      languagesLabel={c.languagesLabel}
+      menuLabel={c.menuLabel}
+      languages={languages}
+    />
+    <main id="indhold" class="flex-1">
+      <slot />
+    </main>
+    <footer id="kontakt" class="wrap w-full pb-14 scroll-mt-20">
+      <div class="border-t border-krom pt-8 flex flex-wrap items-baseline justify-between gap-x-8 gap-y-3">
+        <p>{c.contactLabel}: <a href={`mailto:${CONTACT}`}>{CONTACT}</a></p>
+        <ul class="flex flex-wrap gap-x-5 gap-y-1 text-[0.97rem]">
+          <li><a href="/blog.html">{c.blogLabel}</a></li>
+          <li><a href="/rss.xml">RSS</a></li>
+          <li><a href="/ai.html" lang="en">For AI</a></li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>
