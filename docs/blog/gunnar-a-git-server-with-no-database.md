@@ -55,8 +55,8 @@ The bare-metal shape carries a caveat we would rather state than have someone di
 
 ## Where it stands
 
-**Update, November 2026:** Gunnar is now public and live on gunnar.rs. What it is today, and how to run it yourself, is in [the launch post](/blog/gunnar-self-hosted-git-server.html). The paragraphs below describe Gunnar as it stood in August.
+**Update, November 2026:** Gunnar is now public, licensed AGPL-3.0-only and live on gunnar.rs. What it is today, and how to run it yourself, is in [the launch post](/blog/gunnar-self-hosted-git-server.html). The paragraphs below describe Gunnar as it stood in August.
 
-Gunnar is at 1.1.0. The git matrix runs green against stock git, SSH and smart HTTP both serve real repositories, LFS works on both, and the dependency graph is 281 crates with zero violations against the banned list. It is MIT OR Apache-2.0, and the repository is private while the design settles.
+Gunnar was at 1.1.0. The git matrix ran green against stock git, SSH and smart HTTP both served real repositories, LFS worked on both, and the dependency graph was 281 crates with zero violations against the banned list. It was MIT OR Apache-2.0 then, and the repository was private while the design settled.
 
 If a forge that fits in 15 MB and boots without an operating system is useful to you, tell us what you would point it at: [info@vetra.se](mailto:info@vetra.se).
