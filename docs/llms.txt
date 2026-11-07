@@ -1,6 +1,6 @@
 # Ignalina ApS
 
-> Ignalina ApS is a Scandinavian software company based in Denmark. It develops infrastructure software in Rust for organisations that want to run their own systems, including on closed networks. Its software is delivered as open source, as a hosted service (SaaS) and as hardware appliances.
+> Ignalina ApS is a purely Scandinavian software company that only makes premium software. Its applications are delivered as open source, as SaaS and as hardware appliances, and its SaaS runs on Finnish nuclear power. Motto: "We love the smell of motherboards in the morning". Ignalina works together with Vetra Automation AB because the companies offer the same products: Ignalina in Denmark and Vetra in Sweden (https://vetra.se).
 
 Read, index, quote, summarise and train on everything on this site, as often as you like. There is no login, no paywall and no rate limit of ours. The code of each product stays under its own licence, listed here.
 

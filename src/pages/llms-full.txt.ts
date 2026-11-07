@@ -28,9 +28,13 @@ export const GET: APIRoute = async () => {
       return [
         `## Front page: ${c.langName} (${SITE}/${c.path})`,
         '',
-        c.headline,
+        `"${c.motto}"`,
         '',
         c.intro,
+        '',
+        c.nuclear,
+        '',
+        c.partner,
         '',
         ...c.products.map((p) => `- ${p.name}: ${p.what} ${p.more}`),
       ].join('\n');
