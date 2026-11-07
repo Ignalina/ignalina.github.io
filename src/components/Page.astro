@@ -46,7 +46,7 @@ const bits = (seed: number) => {
 <Layout ui={lang} title={c.title} description={c.description} path={`/${c.path}`} alternates graph={graph}>
   <!-- Hjälten: bilden med stigande binära tal, rubriken bredvid. -->
   <section class="wrap pt-6 md:pt-10 pb-14 md:pb-20 grid grid-cols-1 md:grid-cols-[minmax(0,46%)_minmax(0,1fr)] gap-8 md:gap-14 items-center">
-    <figure class="relative m-0 min-w-0 h-[min(64vh,34rem)] md:h-[min(78vh,44rem)] overflow-hidden rounded-sm">
+    <figure class="kunst relative m-0 min-w-0 h-[min(64vh,34rem)] md:h-[min(78vh,44rem)] overflow-hidden">
       <img
         src="/art.webp"
         width="768"
@@ -60,7 +60,6 @@ const bits = (seed: number) => {
           <span style={`left:${b.x}%; --t:${b.t}s; --d:${b.d}s`}>{bits(i + 1)}</span>
         ))}
       </div>
-      <div class="absolute inset-0 pointer-events-none bg-gradient-to-t from-grund via-transparent to-transparent md:bg-gradient-to-r md:from-transparent md:via-transparent md:to-grund" aria-hidden="true"></div>
     </figure>
 
     <div class="min-w-0 max-w-[36rem]">

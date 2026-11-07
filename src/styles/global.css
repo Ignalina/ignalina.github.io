@@ -89,6 +89,19 @@
   .brod-liste dd { color: #55595f; }
   .tabel a { text-decoration-line: underline; }
 
+  /* ---- Hjältebilden tonas ut åt alla håll, så att den saknar kanter och hörn
+     mot sidans grund. Två masker som bara släpper igenom där de överlappar. */
+  .kunst {
+    -webkit-mask-image:
+      linear-gradient(to right, transparent, #000 14%, #000 86%, transparent),
+      linear-gradient(to bottom, transparent, #000 10%, #000 90%, transparent);
+    mask-image:
+      linear-gradient(to right, transparent, #000 14%, #000 86%, transparent),
+      linear-gradient(to bottom, transparent, #000 10%, #000 90%, transparent);
+    -webkit-mask-composite: source-in;
+    mask-composite: intersect;
+  }
+
   /* ---- Binära tal som stiger ur kyltornen --------------------------------
      Ett lager med siffror ovanför bilden, som glider uppåt och tonar ut. Den
      enda rörelsen på sidan utöver hjältefilmen, och bara när besökaren inte
