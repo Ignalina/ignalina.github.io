@@ -1,0 +1,36 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { allPosts, postDate, postPath } from '../../data/blog';
+
+const posts = await allPosts();
+---
+
+<Layout
+  ui="da"
+  section="blog"
+  title="Blog | Ignalina ApS: selvhostet open source i Rust"
+  description="Tekniske indlæg fra Ignalina om vores software i Rust: selvhostet git-server, air-gapped appliances og data uden JVM. Arkitektur, målinger og det, der gik galt."
+  path="/blog.html"
+>
+  <div class="wrap pt-10 md:pt-16 pb-16 md:pb-24">
+    <h1 class="skilt text-[clamp(1.3rem,0.9rem+1.5vw,1.95rem)] leading-tight">Blog</h1>
+    <p class="mt-4 max-w-[36rem]">
+      Om den software, vi bygger: arkitektur, målinger og det, der gik galt.
+      Indlæg på engelsk er først udgivet på vetra.se.
+    </p>
+    <ul class="list-none m-0 p-0 mt-12 max-w-[42rem]">
+      {posts.map((p) => (
+        <li class="py-7 border-t border-krom" lang={p.data.lang}>
+          <h2 class="text-[1.3rem] leading-snug font-semibold">
+            <a href={postPath(p.slug)} class="no-underline text-blaek hover:text-cherenkov hover:underline">{p.data.title}</a>
+          </h2>
+          <p class="mt-1.5 text-[0.97rem] text-staal">
+            <time datetime={p.data.pubDate.toISOString().slice(0, 10)}>{postDate(p.data.pubDate)}</time>,
+            {p.data.author}{p.data.lang === 'en' && <span lang="da">, på engelsk</span>}
+          </p>
+          <p class="mt-2">{p.data.description}</p>
+        </li>
+      ))}
+    </ul>
+  </div>
+</Layout>

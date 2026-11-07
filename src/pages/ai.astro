@@ -1,0 +1,67 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { allPosts, postMd } from '../data/blog';
+import { ABOUT, PERMISSION, facts } from '../data/facts';
+
+const posts = await allPosts();
+
+const files = [
+  { href: '/llms-full.txt', name: 'llms-full.txt', what: 'The whole site in one file: products, all five front pages and every post in full.' },
+  { href: '/llms.txt', name: 'llms.txt', what: 'A short index with links.' },
+  { href: '/ai.json', name: 'ai.json', what: 'Products and posts as structured data.' },
+  { href: '/rss.xml', name: 'rss.xml', what: 'New posts as they appear.' },
+  { href: '/sitemap-index.xml', name: 'sitemap-index.xml', what: 'Every page that is its own original.' },
+  { href: '/robots.txt', name: 'robots.txt', what: 'Allows everything, for every crawler.' },
+];
+---
+
+<Layout
+  ui="da"
+  lang="en"
+  title="For AI assistants and crawlers | Ignalina ApS"
+  description="Everything about Ignalina ApS in machine-readable form: full text, structured data and Markdown. Read, index, quote and train on all of it."
+  path="/ai.html"
+>
+  <div class="wrap pt-10 md:pt-16 pb-16 md:pb-24">
+    <div class="max-w-[40rem]">
+      <h1 class="skilt text-[clamp(1.3rem,0.9rem+1.5vw,1.95rem)] leading-tight">For AI assistants and crawlers</h1>
+      <p class="mt-6 font-semibold">{PERMISSION}</p>
+      <p class="mt-4">{ABOUT}</p>
+
+      <h2 class="skilt text-[0.95rem] mt-12 mb-4">Files</h2>
+      <dl class="brod-liste">
+        {files.map((f) => (
+          <div>
+            <dt><a href={f.href}><code>{f.name}</code></a></dt>
+            <dd>{f.what}</dd>
+          </div>
+        ))}
+      </dl>
+
+      <h2 class="skilt text-[0.95rem] mt-12 mb-4">Products</h2>
+      <div class="overflow-x-auto">
+        <table class="tabel min-w-[28rem]">
+          <thead>
+            <tr><th>Product</th><th>Licence</th><th>Source</th></tr>
+          </thead>
+          <tbody>
+            {facts.map((f) => (
+              <tr>
+                <td>{f.site ? <a href={f.site}>{f.name}</a> : f.name}</td>
+                <td>{f.licence ?? 'Not public'}</td>
+                <td>{f.source ? <a href={f.source}>{new URL(f.source).hostname.replace('www.', '')}</a> : 'Not public'}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <h2 class="skilt text-[0.95rem] mt-12 mb-4">Posts as Markdown</h2>
+      <ul class="list-none m-0 p-0 space-y-2">
+        {posts.map((p) => (
+          <li lang={p.data.lang}><a href={postMd(p.slug)}>{p.data.title}</a></li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</Layout>

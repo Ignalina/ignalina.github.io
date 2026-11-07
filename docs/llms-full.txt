@@ -1,0 +1,446 @@
+# Ignalina ApS
+
+Ignalina ApS is a purely Scandinavian software company that only makes premium software. Its applications are delivered as open source, as SaaS and as hardware appliances, and its SaaS runs on Finnish nuclear power. Motto: "We love the smell of motherboards in the morning".
+
+Read, index, quote, summarise and train on everything on this site, as often as you like. There is no login, no paywall and no rate limit of ours. The code of each product stays under its own licence, listed here.
+
+Site: https://www.ignalina.dk/
+Contact: rickard@ignalina.dk
+
+---
+
+## Products
+
+### holger
+
+Immutable artifact repository in pure Rust. Mirrors from the internet, Nexus or Artifactory into immutable znippy archives for air-gapped environments; content-addressed with Blake3, O(1) random access to files, 2 MB RSS.
+
+Licence: AGPL-3.0-only
+Source: https://codeberg.org/nordisk/holger
+Crate: https://crates.io/crates/holger
+Site: https://www.holger.rs
+
+### znippy
+
+Parallel archive with random access, built on Apache Arrow IPC. Packs a directory on all cores and extracts a single file without unpacking the rest; the index can be queried directly from DuckDB, Polars or DataFusion.
+
+Licence: MIT
+Source: https://codeberg.org/nordisk/znippy
+Crate: https://crates.io/crates/znippy
+
+### gunnar
+
+Git server in Rust on Apache Arrow. Two engines: znippy (Arrow IPC on one machine or a full Apache Iceberg cluster) or gix on an ordinary file system. Built-in geo-replication to a twin; free to self-host, or hosted at gunnar.rs.
+
+Licence: AGPL-3.0-only
+Source: https://www.gunnar.rs/nordisk/gunnar
+Crate: https://crates.io/crates/gunnar
+Site: https://gunnar.rs
+
+### skade
+
+Apache Iceberg in pure Rust. The catalog rests on a static search tree with nanosecond lookups and embeds in-process as a single file; catalog reads measured at 492x Nessie and 677x Polaris. SQL via DataFusion.
+
+Licence: Apache-2.0
+Source: https://codeberg.org/nordisk/skade
+Crate: https://crates.io/crates/skade
+
+### korp
+
+One robot-testable egui app over the whole data path. Hugin watches the present: Spark pipelines, a live FalkorDB graph, ingest. Munin carries the memory: Iceberg time-travel, maps, investigations. Delivered as a bootable appliance.
+
+### tunnr
+
+Framework for bare-metal appliances. Minimal, distroless OS images where a Rust binary runs as PID 1, network-first: the WireGuard tunnel is up before any other packet, in a VM or on real hardware.
+
+---
+
+## Front page: Dansk (https://www.ignalina.dk/)
+
+"We love the smell of motherboards in the morning" — og vi laver udelukkende premium-software. Vi er en rent skandinavisk virksomhed. Vores applikationer leveres som open source, som SaaS og som hardware-appliances.
+
+Vores SaaS-løsninger kører på finsk atomkraft.
+
+- holger: Immutable artifact repository i ren Rust. Spejler fra internettet, Nexus eller Artifactory til uforanderlige znippy-arkiver til air-gapped miljøer: content-addressed med Blake3, O(1) random access til filer, 2 MB RSS.
+- znippy: Parallelt arkiv med random access, bygget på Apache Arrow IPC. Pakker en mappe med fuld fart på alle kerner og henter en enkelt fil ud uden at pakke resten ud; indekset kan forespørges direkte fra DuckDB, Polars eller DataFusion.
+- gunnar: Git-server i Rust på Apache Arrow. To motorer: znippy (Arrow IPC på én maskine eller en fuld Apache Iceberg-klynge) eller gix på et almindeligt filsystem. Indbygget geo-replikering til en twin; gratis at hoste selv, eller hostet på gunnar.rs.
+- skade: Apache Iceberg i ren Rust. Kataloget hviler på et statisk søgetræ med opslag på nanosekunder og kan indlejres in-process som én fil; katalog-læsninger målt til 492× Nessie og 677× Polaris. SQL via DataFusion.
+- korp: Én robot-testbar egui-app over hele datavejen. Hugin holder øje med nuet: Spark-pipelines, en live FalkorDB-graf, ingest. Munin bærer hukommelsen: Iceberg time-travel, kort, efterforskninger. Leveres som en bootbar appliance.
+- tunnr: Framework til bare-metal appliances. Minimale, distroless OS-images, hvor en Rust-binær kører som PID 1, network-first: WireGuard-tunnelen er oppe før nogen anden pakke, i en VM eller på rigtig hardware.
+
+---
+
+## Front page: Svenska (https://www.ignalina.dk/index.sv.html)
+
+"We love the smell of motherboards in the morning" — och vi gör ingenting annat än premiummjukvara. Vi är ett renodlat skandinaviskt företag. Våra applikationer levereras som open source, som SaaS och som hårdvaru-appliances.
+
+Våra SaaS-lösningar körs på finsk kärnkraft.
+
+- holger: Immutable artifact repository i ren Rust. Speglar från internet, Nexus eller Artifactory till oföränderliga znippy-arkiv för air-gappade miljöer: content-addressed med Blake3, O(1) random access till filer, 2 MB RSS.
+- znippy: Parallellt arkiv med random access, byggt på Apache Arrow IPC. Packar en katalog i full fart på alla kärnor och plockar ut en enskild fil utan att packa upp resten; indexet går att fråga direkt från DuckDB, Polars eller DataFusion.
+- gunnar: Git-server i Rust på Apache Arrow. Två motorer: znippy (Arrow IPC på en maskin, eller ett fullt Apache Iceberg-kluster) eller gix på ett vanligt filsystem. Inbyggd geo-replikering till en twin; gratis att hosta själv, eller hostad på gunnar.rs.
+- skade: Apache Iceberg i ren Rust. Katalogen vilar på ett statiskt sökträd med uppslag på nanosekunder och bäddas in in-process som en fil; katalogläsningar uppmätta till 492× Nessie och 677× Polaris. SQL via DataFusion.
+- korp: En robottestbar egui-app över hela datavägen. Hugin vakar över nuet: Spark-pipelines, en live FalkorDB-graf, ingest. Munin bär minnet: Iceberg time-travel, kartor, utredningar. Levereras som en bootbar appliance.
+- tunnr: Ramverk för bare-metal-appliances. Minimala, distroless OS-images där en Rust-binär kör som PID 1, network-first: WireGuard-tunneln är uppe före alla andra paket, i en VM eller på riktig hårdvara.
+
+---
+
+## Front page: Suomi (https://www.ignalina.dk/index.fi.html)
+
+"We love the smell of motherboards in the morning" — emmekä tee muuta kuin premium-ohjelmistoja. Olemme puhtaasti skandinaavinen yritys. Sovelluksemme toimitetaan open sourcena, SaaS-palveluna ja hardware-applianceina.
+
+SaaS-ratkaisumme toimivat suomalaisella ydinvoimalla.
+
+- holger: Immutable artifact repository puhtaalla Rustilla. Peilaa internetistä, Nexuksesta tai Artifactorysta muuttumattomiin znippy-arkistoihin air-gapped-ympäristöihin: content-addressed Blake3:lla, O(1) random access tiedostoihin, 2 MB RSS.
+- znippy: Rinnakkainen random access -arkisto Apache Arrow IPC:n päällä. Pakkaa hakemiston kaikkien ytimien nopeudella ja hakee yksittäisen tiedoston purkamatta muuta; indeksiä voi kysellä suoraan DuckDB:stä, Polarsista tai DataFusionista.
+- gunnar: Git-palvelin Rustilla Apache Arrown päällä. Kaksi moottoria: znippy (Arrow IPC yhdellä koneella tai täysi Apache Iceberg -klusteri) tai gix tavallisella tiedostojärjestelmällä. Sisäänrakennettu geo-replikointi twinille; ilmainen isännöidä itse, tai isännöitynä gunnar.rs:ssä.
+- skade: Apache Iceberg puhtaalla Rustilla. Katalogi perustuu staattiseen hakupuuhun, jonka haut kestävät nanosekunteja, ja se upotetaan in-process yhtenä tiedostona; katalogiluvut mitattu 492× Nessieen ja 677× Polarikseen verrattuna. SQL DataFusionin kautta.
+- korp: Yksi robotilla testattava egui-sovellus koko datapolun yli. Hugin valvoo nykyhetkeä: Spark-pipelinet, live FalkorDB-graafi, ingest. Munin kantaa muistia: Iceberg time-travel, kartat, tutkinnat. Toimitetaan käynnistettävänä appliancena.
+- tunnr: Bare-metal-appliance-kehys. Minimaaliset, distroless OS-imaget, joissa Rust-binääri ajetaan PID 1:nä, network-first: WireGuard-tunneli on ylhäällä ennen yhtäkään muuta pakettia, virtuaalikoneessa tai oikealla raudalla.
+
+---
+
+## Front page: Íslenska (https://www.ignalina.dk/index.is.html)
+
+"We love the smell of motherboards in the morning" — og við gerum ekkert nema premium-hugbúnað. Við erum hreinræktað skandinavískt fyrirtæki. Forritin okkar eru afhent sem open source, sem SaaS og sem hardware-appliances.
+
+SaaS-lausnirnar okkar keyra á finnskri kjarnorku.
+
+- holger: Immutable artifact repository í hreinu Rust. Speglar frá internetinu, Nexus eða Artifactory yfir í óbreytanleg znippy-söfn fyrir air-gapped umhverfi: content-addressed með Blake3, O(1) random access að skrám, 2 MB RSS.
+- znippy: Samhliða safn með random access, byggt á Apache Arrow IPC. Pakkar möppu á fullum hraða allra kjarna og sækir staka skrá án þess að afpakka restina; hægt er að spyrja vísinn beint úr DuckDB, Polars eða DataFusion.
+- gunnar: Git-þjónn í Rust á Apache Arrow. Tvær vélar: znippy (Arrow IPC á einni vél, eða heill Apache Iceberg-klasi) eða gix á venjulegu skráakerfi. Innbyggð geo-replication til twin; ókeypis að hýsa sjálfur, eða hýst á gunnar.rs.
+- skade: Apache Iceberg í hreinu Rust. Katalogurinn hvílir á kyrrstæðu leitartré með uppflettingum á nanósekúndum og er felldur inn in-process sem ein skrá; lestur úr katalog mældur 492× Nessie og 677× Polaris. SQL í gegnum DataFusion.
+- korp: Eitt egui-forrit, prófanlegt með vélmennum, yfir alla gagnaleiðina. Hugin vakir yfir núinu: Spark-pipelines, lifandi FalkorDB-graf, ingest. Munin geymir minnið: Iceberg time-travel, kort, rannsóknir. Afhent sem ræsanlegt appliance.
+- tunnr: Rammi fyrir bare-metal appliances. Lágmarks, distroless OS-images þar sem Rust-forrit keyrir sem PID 1, network-first: WireGuard-göngin eru uppi á undan öllum öðrum pökkum, í sýndarvél eða á raunverulegum vélbúnaði.
+
+---
+
+## Front page: 日本語 (https://www.ignalina.dk/index.ja.html)
+
+"We love the smell of motherboards in the morning" — そして私たちが作るのはプレミアムなソフトウェアだけです。私たちは純粋なスカンジナビアの企業です。アプリケーションはオープンソース、SaaS、ハードウェアアプライアンスとして提供しています。
+
+私たちの SaaS ソリューションはフィンランドの原子力で動いています。
+
+- holger: 純 Rust 製の immutable artifact repository。 インターネット、Nexus、Artifactory からミラーし、air-gapped 環境向けの不変な znippy アーカイブに収めます。Blake3 による content-addressed、ファイルへの O(1) random access、RSS はわずか 2 MB。
+- znippy: Apache Arrow IPC 上の、random access 可能な並列アーカイブ。 全コアの速度でディレクトリをパックし、残りを展開せずに任意の 1 ファイルだけを取り出せます。インデックスは DuckDB、Polars、DataFusion から直接クエリできます。
+- gunnar: Apache Arrow 上の Rust 製 Git サーバー。 2 つのエンジン:znippy(1 台のマシン上の Arrow IPC、または本格的な Apache Iceberg クラスター)、または通常のファイルシステム上の gix。twin への geo-replication を内蔵。セルフホストは無料、または gunnar.rs でホスティング。
+- skade: 純 Rust 製の Apache Iceberg。 カタログはナノ秒単位で引ける静的な探索木の上にあり、1 ファイルとして in-process に組み込めます。カタログ読み取りは Nessie の 492 倍、Polaris の 677 倍を計測。SQL は DataFusion 経由。
+- korp: データ経路全体をカバーする、ロボットでテスト可能な egui アプリ。 Hugin は「今」を見張ります:Spark pipelines、ライブの FalkorDB グラフ、ingest。Munin は記憶を担います:Iceberg time-travel、地図、調査。起動可能なアプライアンスとして提供。
+- tunnr: bare-metal アプライアンスのためのフレームワーク。 Rust バイナリが PID 1 として動く、最小限の distroless OS イメージ。network-first:ほかのどのパケットよりも先に WireGuard トンネルが立ち上がります。VM でも実機でも。
+
+---
+
+## Gunnar: en let, selvhostet git-server til jeres egen hardware
+
+2026-11-06, Rickard, language: da, original: https://vetra.se/blog/gunnar-self-hosted-git-server/
+
+Gunnar, vores selvhostede git-server skrevet i Rust, er lanceret. Koden er offentlig på [gunnar.rs/nordisk/gunnar](https://www.gunnar.rs/nordisk/gunnar), og præcis den samme kode kører [gunnar.rs](https://www.gunnar.rs) som hostet tjeneste. Gunnar udvikles på Gunnar: det er i det repository, vores egne commits lander.
+
+Den hostede tjeneste er den nemme del at pege på, men den er ikke pointen. Gunnar findes, for at en virksomhed kan køre **sin egen git-server on-premise, på sin egen hardware**, uden at skulle tage en hel platform på sig. Den er let, den har det, et team har brug for, og resten er udeladt med vilje.
+
+De fleste selvhostede git-servere er en af to ting. GitLab self-managed er en hel DevOps-suite, der skal driftes. Gitea og Forgejo er lettere, men de kører `git`-programmet som en underproces for at udføre det egentlige arbejde. Gunnar implementerer selv git-protokollen, uden nogen git- eller ssh-underproces, og almindelig git er dommeren i testsuiten.
+
+## En git-server, ikke en platform
+
+Ændringsloggen for 1.7.0 siger det på én linje: Gunnar er kun en git-server. Build-runneren, pakkeregistret og OCI-understøttelsen er fjernet. En platform er noget, man skal passe, og jeres CI og jeres artefaktlager har allerede et hjem.
+
+Det her har den:
+
+- Git over SSH og smart HTTP, og Git LFS på begge.
+- En webkonsol, der logger ind med passkeys, så der ikke er nogen adgangskoder at lække. Rør en sikkerhedsnøgle, eller brug den passkey, som browseren gemmer.
+- Pull requests med en rigtig trevejs-merge. En konflikt afvises med hver konfliktende sti nævnt, og merge-commits signeres med serverens egen nøgle, så repositories, der kræver signerede commits, accepterer dem.
+- Signerede pushes (sshsig/ed25519), en transparenslog og et hash-kædet revisionsspor for hver serverindstilling.
+- Prometheus-metrikker og replikering til en twin.
+- Krypterede repositories, kvantesikre som standard.
+- Tilvalg ved bygning: webhooks, virksomheds-SSO over OIDC og SAML samt pull-spejle.
+
+## En selvhostet git-server i to kommandoer
+
+```
+cargo install gunnar
+gunnar
+```
+
+En `gunnar` uden argumenter behøver ingen konfigurationsfil. Ved første start opretter den sin datarod, sin SSH-værtsnøgle, sin egen certifikatudsteder og et forseglet hemmelighedslager, og den lytter på loopback: git over SSH på port 2222, smart HTTP på 8080 og kontrolplanet på 50051. Det første tilmeldingskald gør dig til administrator, og den dør lukker derefter for altid.
+
+Standardbygget er et **air-gapped byg**. Det foretager ingen udgående kald, og det kompilerer ikke den målings- og butikskode, som gunnar.rs bruger. Webhooks, SSO og spejle er cargo-features, I slår til, når jeres netværk tillader det.
+
+Let er en målt påstand, ikke en fornemmelse. Den 1. november 2026 brugte en nystartet server med 22 repositories 5 MiB heap og 24 MiB i alt. Hvert benchmarktal i repositoriets README er genereret fra en resultatfil med vært, dato og belastning, så det ikke kan glide væk fra det, der faktisk blev kørt. Den samme server kører fra cargo under systemd, i en container eller som Vetras OS-løse hardware-appliance med en hærdet kerne.
+
+## En twin i stedet for et backupscript
+
+En git-server on-prem er kun så god som det, der sker, når dens disk dør. Gunnar replikerer til en twin: enhver anden maskine, der kan nå den primære, kommer med via `gunnar control twin join`. Hvis den primære forsvinder, gør `replication promote` twin'en til den nye primære, og `replication demote` og `replication standby` sætter den gamle primære ned.
+
+## Repositories, som serveren ikke kan læse
+
+Et krypteret repository forsegles på din maskine, før noget forlader den. `gunnar-cli crypt init` laver en nøglering, der kun er pakket ind til medlemmernes nøgler, med ML-KEM-768 og X25519 sammen. Den hybrid er, hvad kvantesikker betyder her: en fremtidig kvantecomputer skal også knække den post-kvante halvdel. Serveren gemmer kun krypteret tekst. En persons krypteringsnøgle kan ligge på en YubiKey, og konsollen åbner krypterede filer med et tryk på den nøgle.
+
+Det betyder mest på en server, man ikke selv kører, og det bringer os til gunnar.rs.
+
+## gunnar.rs: et europæisk alternativ til GitHub
+
+Ikke alle vil have en maskine i racket. På gunnar.rs kan I oprette en konto og betale for den lagerplads, I vælger, eller bestille jeres egen private Gunnar-instans: egen server, egen konsol og egen twin i samme zone, bag et VPN. Sammenlignet med at have koden på GitHub, GitLab eller Bitbucket er der fire forskelle, som vi mener betyder noget:
+
+- **I kan gå med det hele.** gunnar.rs kører den samme kode, som I kan installere med `cargo install gunnar`. At flytte væk betyder at starte jeres egen server og pushe til den, og I beholder samme konsol, samme rettighedsmodel og samme adfærd. I bytter ikke et hostet produkt ud med et andet.
+- **Vi kan være ude af stand til at læse jeres kode.** En hostet forge kan normalt læse jeres kildekode; det skal den, for at vise diffs og søge. Med et krypteret repository holder gunnar.rs kun krypteret tekst, og nøgleringen er pakket ind til jeres nøgler, ikke vores. Prisen er reel: det, en server ellers ville gøre med indholdet, kan den ikke gøre med krypteret tekst.
+- **Den er europæisk.** Gunnar ejes af Vetra Automation AB i Sverige og Ignalina ApS i Danmark, og gunnar.rs kører på europæisk infrastruktur. For en nordisk virksomhed, der vil have sin kode under europæisk jurisdiktion, fjerner det et spørgsmål fra indkøbsgennemgangen.
+- **I kan læse, hvad der kører.** Gunnar er AGPL-3.0-only, så serveren og konsollen, der håndterer jeres repositories, er offentlig kildekode. Teams, der vil indlejre eller ændre den uden AGPL's forpligtelser, kan bede om en kommerciel licens på [gunnar@gunnar.rs](mailto:gunnar@gunnar.rs).
+
+Én ting vil vi hellere sige end lade jer opdage: gunnar.rs er i beta. Vi replikerer jeres data, men vi kan ikke garantere dem endnu. Behold en kopi af alt, I ikke har råd til at miste, hvilket med git betyder endnu en remote.
+
+## Hent koden
+
+Alle kan klone repositoriet skrivebeskyttet, uden konto og uden registreret nøgle:
+
+```
+git clone ssh://anonymous@git.gunnar.rs:2222/nordisk/gunnar.git
+cd gunnar
+cargo build --release
+```
+
+README'en på [gunnar.rs/nordisk/gunnar](https://www.gunnar.rs/nordisk/gunnar) gennemgår en server, konsollen med en passkey, et første push, et krypteret repository og en twin, alt sammen på én Linux-vært. Vores integrationstests kører præcis de kommandoer i den rækkefølge. Vil du vide, hvordan Gunnar taler git uden git-programmet, og høre om det LFS-specialtilfælde, der fik et manglende objekt til at se ud, som om det var der, så læs vores [tekniske gennemgang](/blog/gunnar-a-git-server-with-no-database.html).
+
+For at prøve den hostede tjeneste kan du [oprette dig på gunnar.rs](https://www.gunnar.rs/signup). Vil I have Gunnar på jeres egen hardware og gerne have hjælp til at få den derhen, så skriv til [info@vetra.se](mailto:info@vetra.se).
+
+---
+
+## Gunnar is live: a lightweight self-hosted git server for your own hardware
+
+2026-11-06, Rickard, language: en, original: https://vetra.se/blog/gunnar-self-hosted-git-server/
+
+Gunnar, our self-hosted git server written in Rust, is launched. The code is public at [gunnar.rs/nordisk/gunnar](https://www.gunnar.rs/nordisk/gunnar), and the exact same code runs [gunnar.rs](https://www.gunnar.rs) as a hosted service. Gunnar is developed on Gunnar: that repository is where our own commits land.
+
+The hosted service is the easy part to point at, but it is not the point. Gunnar exists so that a company can run **its own git server on-premise, on its own hardware**, without taking on a platform. It is lightweight, it has what a team needs, and it leaves out the rest on purpose.
+
+Most self-hosted git servers are one of two things. GitLab self-managed is a whole DevOps suite to operate. Gitea and Forgejo are lighter, but they run the `git` binary as a subprocess to do the actual work. Gunnar implements the git protocol itself, with no git or ssh subprocess anywhere in it, and stock git is the judge in its test suite.
+
+## A git server, not a platform
+
+The changelog for 1.7.0 says it in one line: Gunnar is only a git server. The build runner, the package registry and the OCI support are gone from it. A platform is something you have to look after, and your CI and your artifact store already have homes.
+
+What it does have:
+
+- Git over SSH and smart HTTP, and Git LFS on both.
+- A web console that signs in with passkeys, so there are no passwords to leak. Touch a security key or use the passkey your browser keeps.
+- Pull requests with a real three-way merge. A conflict is refused with every conflicting path named, and merge commits are signed with the server's own key, so repositories that require signed commits accept them.
+- Signed pushes (sshsig/ed25519), a transparency log, and a hash-chained audit trail for every server setting.
+- Prometheus metrics, and replication to a twin.
+- Encrypted repositories, quantum-safe by default.
+- Opt-in at build time: webhooks, company SSO over OIDC and SAML, and pull mirrors.
+
+## A self-hosted git server in two commands
+
+```
+cargo install gunnar
+gunnar
+```
+
+A bare `gunnar` needs no configuration file. On the first start it creates its data root, its SSH host key, its own certificate issuer and a sealed secret store, and it serves on loopback: git over SSH on port 2222, smart HTTP on 8080, and the control plane on 50051. The first enrollment call makes you the administrator, and that door then closes for good.
+
+The default build is an **airgap build**. It makes no outbound calls, and it does not compile the metering or shop code that gunnar.rs uses. Webhooks, SSO and mirrors are cargo features you turn on when your network allows them.
+
+Lightweight is a measured claim, not a feeling. On 2026-11-01, a freshly started server with 22 repositories held 5 MiB of heap and 24 MiB in total. Every benchmark number in the repository's README is rendered from a result file, with host, date and load, so it cannot drift from what was actually run. The same server runs from cargo under systemd, in a container, or as Vetra's OS-less hardware appliance with a hardened kernel.
+
+## A twin instead of a backup script
+
+A git server on-prem is only as good as what happens when its disk dies. Gunnar replicates to a twin: any second box that can reach the primary joins with `gunnar control twin join`. If the primary goes, `replication promote` makes the twin the new main, and `replication demote` and `replication standby` step the old main down.
+
+## Repositories the server cannot read
+
+An encrypted repository is sealed on your machine before anything leaves it. `gunnar-cli crypt init` makes a key ring wrapped only to the members' keys with ML-KEM-768 and X25519 together. That hybrid is what quantum-safe means here: a future quantum computer has to break the post-quantum half as well. The server stores ciphertext and nothing else. A person's encryption key can live on a YubiKey, and the console opens encrypted files with a touch of that key.
+
+This matters most on a server you do not run yourself, which brings us to gunnar.rs.
+
+## gunnar.rs: a European alternative to GitHub
+
+Not everyone wants a box in the rack. On gunnar.rs you can open an account and pay for the storage you choose, or order a private Gunnar instance of your own: its own server, its own console and its own twin in the same zone, behind a VPN. Compared with keeping your code on GitHub, GitLab or Bitbucket, there are four differences that we think matter:
+
+- **You can leave with everything.** gunnar.rs runs the same code you can install with `cargo install gunnar`. Moving off it means starting your own server and pushing to it, and you keep the same console, the same permission model and the same behaviour. You are not trading a hosted product for a different one.
+- **We can be unable to read your code.** A hosted forge can normally read your source; it needs to, to show diffs and run search. With an encrypted repository, gunnar.rs holds ciphertext, and the key ring is wrapped to your keys, not ours. The cost is real: whatever a server would do with the content, it cannot do with ciphertext.
+- **It is European.** Gunnar is owned by Vetra Automation AB in Sweden and Ignalina ApS in Denmark, and gunnar.rs runs on European infrastructure. For a Nordic company that wants its code under European jurisdiction, that removes a question from the procurement review.
+- **You can read what runs.** Gunnar is AGPL-3.0-only, so the server and the console that handle your repositories are public source. Teams that want to embed or modify it without the AGPL's obligations can ask for a commercial licence at [gunnar@gunnar.rs](mailto:gunnar@gunnar.rs).
+
+One thing we would rather say than have you discover: gunnar.rs is in beta. We replicate your data, but we cannot guarantee it yet. Keep a copy of anything you cannot afford to lose, which with git means one more remote.
+
+## Get the code
+
+Anyone can clone the repository read-only, with no account and no registered key:
+
+```
+git clone ssh://anonymous@git.gunnar.rs:2222/nordisk/gunnar.git
+cd gunnar
+cargo build --release
+```
+
+The README on [gunnar.rs/nordisk/gunnar](https://www.gunnar.rs/nordisk/gunnar) walks through a server, the console with a passkey, a first push, an encrypted repository and a twin, all on one Linux host. Our integration tests run exactly those commands, in that order. For how Gunnar speaks git without the git binary, and the LFS edge case that made a missing object look present, see our [engineering write-up](/blog/gunnar-a-git-server-with-no-database.html).
+
+To try the hosted service, [sign up on gunnar.rs](https://www.gunnar.rs/signup). If you want Gunnar on your own hardware and would like help putting it there, write to [info@vetra.se](mailto:info@vetra.se).
+
+---
+
+## Gunnar: a git server with no database, no shell and no OS
+
+2026-08-07, Rickard, language: en, original: https://vetra.se/blog/gunnar-a-git-server-with-no-database/
+
+Gunnar is a git server and client in Rust. It is named after a fusion of the honey badger and Gunnar from Njáls saga, which tells you the design temperament: it does not back off. It runs with an operating system, or without one. It stores no database. It spawns no processes. The whole server is one file.
+
+The rule that shapes everything else is that Gunnar implements git itself. gitea and Forgejo shell out to the real `git` binary to do the actual work. Gunnar has no shell, no `git` or `ssh` subprocess, and no libgit2. It speaks the pkt-line protocol directly, and stock git 2.53 is both the client and the judge: the entire test suite is real git talking to it.
+
+## No database, and no read path through the log
+
+A forge normally needs somewhere to keep refs, users, keys and grants, which usually means Postgres or SQLite alongside the repositories. Gunnar keeps all of it in memory and persists it with an Apache Arrow IPC log, one `RecordBatch` per push. The important half of that sentence is the second one: **no request reads Arrow to answer**. The log is the durability mechanism, not the query path, so a fetch never waits on it.
+
+Two git transports ride one implementation. SSH is the default; smart HTTP sits behind a feature that is off unless you ask for it, so an appliance image that wants no HTTP surface compiles none of it. Both drive the same pkt-line conversation through the same authorisation call, against the same key table and the same ACL. The legacy `git://` transport is never built at all, and the dumb HTTP protocol is refused by name.
+
+## Measured against gitea and Forgejo
+
+We benchmarked against both rivals under equal RAM, CPU and disk parameters: 8 CPUs and 8192 MB per engine, read back out of each container's own cgroup, three interleaved rounds. The column below is Gunnar against *the better of the two*, whichever won each row, which is the stricter comparison to make.
+
+| Operation | Net CPU (s) | Peak RSS (MB) |
+| --- | --- | --- |
+| clone (year of history) | 0.234 vs 0.260 | 304 vs 655 |
+| fetch (diverged) | 0.027 vs 0.059 | 21 vs 262 |
+| fetch, after gc | 0.023 vs 0.026 | 13 vs 252 |
+| clone+fetch+push ×8 | 1.297 vs 2.603 | 189 vs 537 |
+
+The memory column is where the architecture shows. A fetch against a diverged repository costs Gunnar 21 MB where the best rival needs 262 MB, and after a `gc` it drops to 13 MB against 252 MB. That is not a tuning win, it is the absence of a JVM-shaped runtime and of a subprocess per request.
+
+On bytes over the wire the picture is honest rather than flattering: a plain clone is a tie, and on some fetch shapes the rivals send slightly less. Where `gunnar gc` has recomputed deltas, Gunnar sends 238.7 kB against 331.5 kB, about 0.72× the rival's bytes. Every measured row, its conditions, and what each spread actually means is in the repository's benchmark document rather than summarised into a single number here.
+
+## The bootstrap window
+
+An appliance has no shell, which creates an awkward chicken-and-egg problem: how does the first administrator key get onto a box you cannot log into? The old answer was that `gunnar serve` refused to start against an empty identity table, which meant there was no first boot at all.
+
+The current answer is a bootstrap window. A fresh server starts empty and says so on every line of its log: the enrollment call is open to any caller that can reach the control port, with no credential, and it creates an administrator. It closes permanently on the first success. Deleting every identity afterwards does not reopen it, because the window closes on the record of who claimed the server, not on the key count.
+
+The alternative we rejected was baking operator keys into the image at build time. A key baked into an image is a credential that cannot be revoked and cannot be rotated: every copy of that image carries it, including copies nobody remembers taking. The bootstrap window is a credential nobody holds yet, granted to whoever reaches the box first, and shut for good the moment it is used.
+
+## A war story: the LFS object that was never there
+
+Git LFS rides the same URL, the same token and the same grant as everything else. One authorisation call covers four surfaces, so a read grant may download and may not upload, and a stranger cannot tell a private repository from an absent one.
+
+The interesting part is where the two transports deliberately disagree. The pure-SSH LFS grammar answers each object with `upload`, `download` or `noop`, which means it has to say `noop` both when the server already holds an object and when it does not hold one at all. And git-lfs reads an object with neither an action nor an error as one it already has.
+
+We measured what that does. Against a server rendering a missing object that way, `git lfs fetch --all` printed *1 object found, done.* and exited zero having transferred nothing, and `git clone` then failed blaming the client's own cache for a fault that was entirely the server's. The HTTP batch API can report a 404 per object inside a 200 response, so it does. The two surfaces diverge on purpose, and the decision lives in one function.
+
+## Where it runs, including where it loses your data
+
+Gunnar ships in three shapes, each measured rather than estimated:
+
+- **No OS.** A 29.5 MB ISO booting under QEMU/OVMF as PID 1, bringing up its own network over `AF_NETLINK`. Listening in 3.66 s, and back up 3.69 s after a power cut serving the same exchange.
+- **Container.** A `FROM scratch` image holding one 15 MB file and nothing else. No shell, no libc. Ready in 144 ms, 2.3 to 3.7 MB resident.
+- **On an OS.** systemd. Install 17.3 s, push 385 ms, clone 164 ms.
+
+The bare-metal shape carries a caveat we would rather state than have someone discover: its data root is the initramfs, so **a power cut loses every repository pushed to it**. That is measured, not assumed. It makes the ISO a fine ephemeral or read-mostly node and a bad place to keep the only copy of anything.
+
+## Where it stands
+
+**Update, November 2026:** Gunnar is now public and live on gunnar.rs. What it is today, and how to run it yourself, is in [the launch post](/blog/gunnar-self-hosted-git-server.html). The paragraphs below describe Gunnar as it stood in August.
+
+Gunnar is at 1.1.0. The git matrix runs green against stock git, SSH and smart HTTP both serve real repositories, LFS works on both, and the dependency graph is 281 crates with zero violations against the banned list. It is MIT OR Apache-2.0, and the repository is private while the design settles.
+
+If a forge that fits in 15 MB and boots without an operating system is useful to you, tell us what you would point it at: [info@vetra.se](mailto:info@vetra.se).
+
+---
+
+## Korp: one app over the whole data path, and a UI robots can read
+
+2026-08-06, Rickard, language: en, original: https://vetra.se/blog/korp-one-app-over-the-whole-data-path/
+
+Korp is Swedish for raven, and the app is named after Odin's two: Hugin, who watches what is happening now, and Munin, who keeps the memory. That split is the whole product. Hugin is the live half: Spark pipeline runs, graph queries, data in flight. Munin is the historical half: time-travelling tables, maps, and the investigations you open when something looks wrong.
+
+It is one Rust egui application sitting over the Swedish open-data stack, and it is deliberately thin. Every view is a small use of a library that already exists elsewhere in our constellation. Korp is the control plane, not a new engine.
+
+## Six views, five of them working
+
+The app is a set of views over the same data path:
+
+- **Pipelines.** Spark Declarative Pipelines and Connect, with the job DAG and live progress.
+- **Graph.** Cypher against a live FalkorDB, rendered as nodes and edges. A legible uniform-blue wireframe by default, with a colour-by-type toggle for the pinned ontology palette.
+- **Tables.** Browse and time-travel Iceberg tables. Pick a snapshot from a newest-first picker and load that frame, which is the part people reach for when they need to know what the data said last Tuesday.
+- **Map.** Entities on a map for geospatial work, over GeoParquet.
+- **Investigations.** Create and track findings over the data. Munin's memory, in practice.
+- **Ingest.** Watch a simulated population stream into a chosen graph or warehouse. Partially built; the others are working today.
+
+Sign-in is OIDC over the RFC 8628 device-code flow, reusing the same auth client the rest of the stack uses, so a probe against a token-guarded server authenticates with a bearer token on its outbound calls rather than a bespoke login.
+
+## The demo is the whole path, in one command
+
+The thing we are proudest of is not a view, it is that `korp demo` runs the entire data path end to end from a single command: a simulated population lands in Iceberg, gets read back out, is loaded into a FalkorDB graph, and shows up in Korp's own UI. No new engines are involved anywhere in that chain. It is existing crates wired together, which is the point: if the demo runs, the integration is real.
+
+A second entry point runs the same path live with no shell at all. One Rust binary brings FalkorDB up over the container REST API directly, rather than shelling out to `podman exec`, and can additionally stand up a real Spark Connect server and drive a live Declarative Pipeline through it, or serve the pipeline viewer over HTTP with server-sent events.
+
+An end-to-end test asserts the property that actually matters across that chain: **Iceberg rows in equals graph nodes out**. It is the one assertion that catches a silently lossy stage, and it runs in a container so it checks the packaged artifact rather than a developer's laptop.
+
+## A UI that tests without a display
+
+GUI testing is usually either screenshot diffing, which breaks on a font update, or driving widgets through an accessibility layer, which is slow and awkward. Korp does neither. The entire UI state serialises to a JSON file roughly every 300 ms: which tab is active, what tabs exist, and each view's own state.
+
+A test therefore asserts on data instead of pixels, and needs no display at all. It is the same introspection contract the underlying viewer crates use, so it composes rather than being bolted onto this one app. Two of the most recent commits in the repository are exactly the kind of bug this catches: the state dump named seven tabs' splits while staying silent about eight others, and a set of tabs that turned out to be one pane pretending to be a layout. Neither is visible in a screenshot. Both are obvious in the JSON.
+
+## It ships as an appliance
+
+Korp packages as a bootable appliance that runs the demo to completion under virtualization, with the graph database bundled in. The container boots straight into the demo and produces a fixed, checkable result: 12120 rows across 12 tables becoming 12120 graph nodes and 6 hotspots. Those numbers are the assertion, not decoration.
+
+There are two deployment shapes over one WireGuard spine. One is a bare-metal appliance built with [tunnr](/blog/tunnr-a-distroless-wireguard-appliance.html), where the Korp GUI is PID 1 on a distroless image with no shell underneath it. The other is a hosted container reached over RDP. Same application, same demo, different trust boundary depending on where the data is allowed to live.
+
+## Where it stands
+
+Five of six views work today and the sixth is scaffolded. The demo path runs in one command, the appliance boots and asserts its own output, and the headless state contract makes the UI testable in CI. The repository is private while the constellation it sits in settles.
+
+If a control plane over your own data stack is something you need, or the headless UI-testing approach is useful to you, we are happy to talk: [info@vetra.se](mailto:info@vetra.se).
+
+---
+
+## tunnr: a distroless WireGuard appliance that boots tunnel-first
+
+2026-07-25, Henrik, language: en, original: https://vetra.se/blog/tunnr-a-distroless-wireguard-appliance/
+
+tunnr builds bare-metal WireGuard VPN client appliances. The idea is small and stubborn: a minimal, distroless OS image where a single Rust binary runs as PID 1, the WireGuard tunnel is live before any other packet leaves the box, and the exact same artifact boots in a QEMU virtual machine or on real hardware. No shell. No package manager. No general-purpose userspace to attack.
+
+This is an early project, more architecture and working boot harness than shipping product. This post is about why we're building it and what already runs.
+
+## Why a VPN client should be an appliance
+
+A normal VPN client is a program on a general-purpose operating system. That OS has a shell, a package manager, dozens of daemons, a DHCP client, and a login surface. None of it is needed by the VPN, and all of it is attack surface. Worse, there's a window at boot where the machine is on the network *before* the tunnel is up: DHCP chatter, mDNS, whatever a service decided to phone home about. For a device whose entire job is "everything goes through the tunnel," that window is a hole.
+
+tunnr closes it by construction. The appliance is the VPN client and nothing else, and it enforces a short list of laws:
+
+- No shell, no package manager, no general-purpose userspace. Ever.
+- A single binary as PID 1.
+- The WireGuard tunnel comes up before any other packet.
+- Static IP only. No DHCP, so no DHCP attack surface.
+- The UI is mandatory. The appliance is never headless.
+
+Because that PID-1 binary is Rust, with WireGuard via [boringtun](https://github.com/cloudflare/boringtun) and the interface via egui/eframe, the whole userspace is memory-safe by default: no buffer overflows, no use-after-free in the thing holding your tunnel open.
+
+## Two layers, and a strict split
+
+tunnr is deliberately split in two so that no single piece does too much:
+
+- **An orchestrator** loads a variant's config, creates the UEFI/qcow2 images, spawns the per-variant build container, collects the artifacts, and boots the result under QEMU + OVMF. Crucially, the orchestrator *never compiles an OS*. It only orchestrates.
+- **Build containers**, one per OS variant, are isolated compiler environments that each produce a UEFI-bootable artifact. The messy, variant-specific work stays sealed inside them.
+
+The target OS variants range from pragmatic to research: a hardened **Buildroot** Linux at the near end, and a row of pure-Rust operating systems (Redox, Theseus, HermitCore, Motor-OS) at the far end, where even the kernel is memory-safe and the WireGuard client rides a minimal IP/UDP layer with no TCP stack to speak of. On maturity: Buildroot is where the real appliance work is happening today, and the bare-metal Rust OSs are blueprints and placeholders, not booting systems. The design names them so the path is clear, not so we can pretend we're already there.
+
+## A pure-Rust harness that boots the thing and proves it ran
+
+The part that already works end to end is the boot harness. On a host with no Go toolchain, our matrix-test environment, a pure-Rust crate called `tunnr-vm` stands in for the Go orchestrator. It builds a bootable appliance artifact (a kernel plus an initramfs whose PID 1 *is* the appliance init), boots it under the identical QEMU + OVMF (UEFI) + KVM launch the design mandates, captures the serial console, and asserts that the appliance reached runtime with every boot-contract marker present.
+
+The whole packer-and-boot path is `std::process` and std fs: compile the init statically, build a newc cpio, gzip it, launch QEMU. One law on top: there is *no shell script anywhere in the boot path*. A boot either produces its contract markers on the serial line or it fails the test; there's no "looks fine" in between. Four appliance variants exercise it today: the WireGuard appliance itself, a korp demo, an install-on-boot demo container, and a Wayland + RDP desktop that comes up with a listener on port 3389. Three of the four already build a real Rust PID-1 rather than a C stand-in.
+
+## Booting a fleet from one artifact
+
+An appliance is only useful if you can give each unit its own identity without baking a thousand images. tunnr does this the cloud-init way, minus cloud-init: at boot the appliance reads a small attached seed disk, a NoCloud `CIDATA` volume that carries its WireGuard config and its keys, and PID 1 parses that seed straight out of the raw FAT bytes. One image, N seeds, N machines.
+
+We benched the provisioning path apart from the boot so a regression lands on the guilty step. On a 32-core host, minting a node's two x25519 keypairs off the kernel CSPRNG takes ~34 µs, authoring its seed image ~855 µs, and the guest reading its identity back out ~217 µs. The number that matters is the full per-node round trip, author then read back: **3.21 ms**. Provisioning a fleet of N is N times that, plus N boots. The identity layer is not where fleet provisioning gets slow.
+
+## Every build carries provenance
+
+Both halves of a tunnr build are content-addressed and attested through our build tooling: the inner cargo build of the PID-1 payload folds into a signed attestation, and the appliance image itself is fingerprinted by its content. For a security appliance that's the whole point. You should be able to say exactly which bytes are running as PID 1 on a given box, and prove it.
+
+## Where it stands
+
+tunnr is early: the Rust boot harness builds and boots real appliances under UEFI and asserts the boot contract; three of four variants ship a real Rust PID-1; the Buildroot appliance is the live track and the bare-metal Rust operating systems are still on the drawing board. The codebase is private while the architecture settles.
+
+If distroless, tunnel-first, memory-safe network appliances are something you care about, as an operator, a pilot user, or someone building in the same space, we'd like to hear from you: [info@vetra.se](mailto:info@vetra.se).

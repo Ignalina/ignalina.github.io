@@ -10,3 +10,10 @@
 .nornir/site/*.otf
 .nornir/site/*.ttc
 .nornir/site/*.otc
+
+# Astro: beroenden och bygg-cache. docs/ är byggresultatet och ligger i git,
+# eftersom GitHub Pages serverar den katalogen.
+node_modules/
+.astro/
+dist/
+.claude/
