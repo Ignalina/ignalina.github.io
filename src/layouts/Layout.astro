@@ -4,7 +4,7 @@ import { content, langs, type Lang, CONTACT } from '../data/content';
 import '../styles/global.css';
 
 const OG_LOCALE: Record<string, string> = {
-  da: 'da_DK', sv: 'sv_SE', fi: 'fi_FI', is: 'is_IS', ja: 'ja_JP', en: 'en_US',
+  da: 'da_DK', sv: 'sv_SE', nb: 'nb_NO', fi: 'fi_FI', is: 'is_IS', ja: 'ja_JP', en: 'en_US',
 };
 
 interface Props {
@@ -58,7 +58,7 @@ const ld = {
       url: siteUrl,
       logo: siteUrl + 'icon.png',
       email: CONTACT,
-      slogan: c.motto,
+      slogan: c.headline,
       address: { '@type': 'PostalAddress', addressCountry: 'DK' },
       knowsLanguage: langs,
     },

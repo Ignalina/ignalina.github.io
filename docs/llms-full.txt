@@ -1,6 +1,6 @@
 # Ignalina ApS
 
-Ignalina ApS is a purely Scandinavian software company that only makes premium software. Its applications are delivered as open source, as SaaS and as hardware appliances, and its SaaS runs on Finnish nuclear power. Motto: "We love the smell of motherboards in the morning".
+Ignalina ApS is a Scandinavian software company based in Denmark. It develops infrastructure software in Rust for organisations that want to run their own systems, including on closed networks. Its software is delivered as open source, as a hosted service (SaaS) and as hardware appliances.
 
 Read, index, quote, summarise and train on everything on this site, as often as you like. There is no login, no paywall and no rate limit of ours. The code of each product stays under its own licence, listed here.
 
@@ -16,7 +16,7 @@ Contact: rickard@ignalina.dk
 Immutable artifact repository in pure Rust. Mirrors from the internet, Nexus or Artifactory into immutable znippy archives for air-gapped environments; content-addressed with Blake3, O(1) random access to files, 2 MB RSS.
 
 Licence: AGPL-3.0-only
-Source: https://codeberg.org/nordisk/holger
+Source: https://www.gunnar.rs/nordisk/holger
 Crate: https://crates.io/crates/holger
 Site: https://www.holger.rs
 
@@ -25,7 +25,7 @@ Site: https://www.holger.rs
 Parallel archive with random access, built on Apache Arrow IPC. Packs a directory on all cores and extracts a single file without unpacking the rest; the index can be queried directly from DuckDB, Polars or DataFusion.
 
 Licence: MIT
-Source: https://codeberg.org/nordisk/znippy
+Source: https://www.gunnar.rs/nordisk/znippy
 Crate: https://crates.io/crates/znippy
 
 ### gunnar
@@ -42,7 +42,7 @@ Site: https://gunnar.rs
 Apache Iceberg in pure Rust. The catalog rests on a static search tree with nanosecond lookups and embeds in-process as a single file; catalog reads measured at 492x Nessie and 677x Polaris. SQL via DataFusion.
 
 Licence: Apache-2.0
-Source: https://codeberg.org/nordisk/skade
+Source: https://www.gunnar.rs/nordisk/skade
 Crate: https://crates.io/crates/skade
 
 ### korp
@@ -57,76 +57,91 @@ Framework for bare-metal appliances. Minimal, distroless OS images where a Rust 
 
 ## Front page: Dansk (https://www.ignalina.dk/)
 
-"We love the smell of motherboards in the morning" — og vi laver udelukkende premium-software. Vi er en rent skandinavisk virksomhed. Vores applikationer leveres som open source, som SaaS og som hardware-appliances.
+Infrastruktur-software, I selv driver og kontrollerer.
 
-Vores SaaS-løsninger kører på finsk atomkraft.
+Ignalina ApS er en skandinavisk softwarevirksomhed med hjemsted i Danmark. Vi udvikler infrastruktur-software i Rust til organisationer, der selv vil drive deres systemer, også i lukkede netværk. Vores software leveres som open source, som hostet tjeneste (SaaS) og som hardware-appliances.
 
-- holger: Immutable artifact repository i ren Rust. Spejler fra internettet, Nexus eller Artifactory til uforanderlige znippy-arkiver til air-gapped miljøer: content-addressed med Blake3, O(1) random access til filer, 2 MB RSS.
-- znippy: Parallelt arkiv med random access, bygget på Apache Arrow IPC. Pakker en mappe med fuld fart på alle kerner og henter en enkelt fil ud uden at pakke resten ud; indekset kan forespørges direkte fra DuckDB, Polars eller DataFusion.
-- gunnar: Git-server i Rust på Apache Arrow. To motorer: znippy (Arrow IPC på én maskine eller en fuld Apache Iceberg-klynge) eller gix på et almindeligt filsystem. Indbygget geo-replikering til en twin; gratis at hoste selv, eller hostet på gunnar.rs.
-- skade: Apache Iceberg i ren Rust. Kataloget hviler på et statisk søgetræ med opslag på nanosekunder og kan indlejres in-process som én fil; katalog-læsninger målt til 492× Nessie og 677× Polaris. SQL via DataFusion.
-- korp: Én robot-testbar egui-app over hele datavejen. Hugin holder øje med nuet: Spark-pipelines, en live FalkorDB-graf, ingest. Munin bærer hukommelsen: Iceberg time-travel, kort, efterforskninger. Leveres som en bootbar appliance.
-- tunnr: Framework til bare-metal appliances. Minimale, distroless OS-images, hvor en Rust-binær kører som PID 1, network-first: WireGuard-tunnelen er oppe før nogen anden pakke, i en VM eller på rigtig hardware.
+- holger: Lager til softwarepakker, der ikke kan ændres bagefter, også til netværk uden internet. Spejler fra internettet, Nexus eller Artifactory til uforanderlige znippy-arkiver til air-gapped miljøer: content-addressed med Blake3, O(1) random access til filer, 2 MB RSS.
+- znippy: Arkivformat til store datamængder, bygget på den åbne standard Apache Arrow. Pakker en mappe med fuld fart på alle kerner og henter en enkelt fil ud uden at pakke resten ud; indekset kan forespørges direkte fra DuckDB, Polars eller DataFusion.
+- gunnar: Git-server til versionsstyring af kode, som I selv kan drive. To motorer: znippy (Arrow IPC på én maskine eller en fuld Apache Iceberg-klynge) eller gix på et almindeligt filsystem. Indbygget geo-replikering til en twin; gratis at hoste selv, eller hostet på gunnar.rs.
+- skade: Datalager baseret på den åbne tabelstandard Apache Iceberg, skrevet i Rust. Kataloget hviler på et statisk søgetræ med opslag på nanosekunder og kan indlejres in-process som én fil; katalog-læsninger målt til 492× Nessie og 677× Polaris. SQL via DataFusion.
+- korp: Ét program til at følge og undersøge hele datavejen, som kan testes automatisk. Hugin holder øje med nuet: Spark-pipelines, en live FalkorDB-graf, ingest. Munin bærer hukommelsen: Iceberg time-travel, kort, efterforskninger. Leveres som en bootbar appliance.
+- tunnr: Framework til at bygge selvstændige netværksenheder med et minimalt styresystem. Minimale, distroless OS-images, hvor en Rust-binær kører som PID 1, network-first: WireGuard-tunnelen er oppe før nogen anden pakke, i en VM eller på rigtig hardware.
 
 ---
 
 ## Front page: Svenska (https://www.ignalina.dk/index.sv.html)
 
-"We love the smell of motherboards in the morning" — och vi gör ingenting annat än premiummjukvara. Vi är ett renodlat skandinaviskt företag. Våra applikationer levereras som open source, som SaaS och som hårdvaru-appliances.
+Infrastrukturmjukvara som ni själva driver och kontrollerar.
 
-Våra SaaS-lösningar körs på finsk kärnkraft.
+Ignalina ApS är ett skandinaviskt mjukvaruföretag med säte i Danmark. Vi utvecklar infrastrukturmjukvara i Rust för organisationer som vill driva sina system själva, även i slutna nät. Vår mjukvara levereras som öppen källkod, som driftad tjänst (SaaS) och som hårdvaruappliances.
 
-- holger: Immutable artifact repository i ren Rust. Speglar från internet, Nexus eller Artifactory till oföränderliga znippy-arkiv för air-gappade miljöer: content-addressed med Blake3, O(1) random access till filer, 2 MB RSS.
-- znippy: Parallellt arkiv med random access, byggt på Apache Arrow IPC. Packar en katalog i full fart på alla kärnor och plockar ut en enskild fil utan att packa upp resten; indexet går att fråga direkt från DuckDB, Polars eller DataFusion.
-- gunnar: Git-server i Rust på Apache Arrow. Två motorer: znippy (Arrow IPC på en maskin, eller ett fullt Apache Iceberg-kluster) eller gix på ett vanligt filsystem. Inbyggd geo-replikering till en twin; gratis att hosta själv, eller hostad på gunnar.rs.
-- skade: Apache Iceberg i ren Rust. Katalogen vilar på ett statiskt sökträd med uppslag på nanosekunder och bäddas in in-process som en fil; katalogläsningar uppmätta till 492× Nessie och 677× Polaris. SQL via DataFusion.
-- korp: En robottestbar egui-app över hela datavägen. Hugin vakar över nuet: Spark-pipelines, en live FalkorDB-graf, ingest. Munin bär minnet: Iceberg time-travel, kartor, utredningar. Levereras som en bootbar appliance.
-- tunnr: Ramverk för bare-metal-appliances. Minimala, distroless OS-images där en Rust-binär kör som PID 1, network-first: WireGuard-tunneln är uppe före alla andra paket, i en VM eller på riktig hårdvara.
+- holger: Lager för programvarupaket som inte kan ändras i efterhand, även för nät utan internet. Speglar från internet, Nexus eller Artifactory till oföränderliga znippy-arkiv för air-gappade miljöer: content-addressed med Blake3, O(1) random access till filer, 2 MB RSS.
+- znippy: Arkivformat för stora datamängder, byggt på den öppna standarden Apache Arrow. Packar en katalog i full fart på alla kärnor och plockar ut en enskild fil utan att packa upp resten; indexet går att fråga direkt från DuckDB, Polars eller DataFusion.
+- gunnar: Git-server för versionshantering av kod, att driva i egen regi. Två motorer: znippy (Arrow IPC på en maskin, eller ett fullt Apache Iceberg-kluster) eller gix på ett vanligt filsystem. Inbyggd geo-replikering till en twin; gratis att hosta själv, eller hostad på gunnar.rs.
+- skade: Datalager på den öppna tabellstandarden Apache Iceberg, skrivet i Rust. Katalogen vilar på ett statiskt sökträd med uppslag på nanosekunder och bäddas in in-process som en fil; katalogläsningar uppmätta till 492× Nessie och 677× Polaris. SQL via DataFusion.
+- korp: Ett program för att följa och granska hela datavägen, och som går att testa automatiskt. Hugin vakar över nuet: Spark-pipelines, en live FalkorDB-graf, ingest. Munin bär minnet: Iceberg time-travel, kartor, utredningar. Levereras som en bootbar appliance.
+- tunnr: Ramverk för att bygga fristående nätverksenheter med ett minimalt operativsystem. Minimala, distroless OS-images där en Rust-binär kör som PID 1, network-first: WireGuard-tunneln är uppe före alla andra paket, i en VM eller på riktig hårdvara.
+
+---
+
+## Front page: Norsk (https://www.ignalina.dk/index.nb.html)
+
+Infrastrukturprogramvare som dere selv drifter og kontrollerer.
+
+Ignalina ApS er et skandinavisk programvareselskap med hovedsete i Danmark. Vi utvikler infrastrukturprogramvare i Rust for organisasjoner som vil drifte sine systemer selv, også i lukkede nett. Programvaren vår leveres som åpen kildekode, som driftet tjeneste (SaaS) og som maskinvare-appliances.
+
+- holger: Lager for programvarepakker som ikke kan endres i ettertid, også for nett uten internett. Speiler fra internett, Nexus eller Artifactory til uforanderlige znippy-arkiver for air-gappede miljøer: content-addressed med Blake3, O(1) random access til filer, 2 MB RSS.
+- znippy: Arkivformat for store datamengder, bygget på den åpne standarden Apache Arrow. Pakker en mappe i full fart på alle kjerner og henter ut en enkelt fil uten å pakke ut resten; indeksen kan spørres direkte fra DuckDB, Polars eller DataFusion.
+- gunnar: Git-server for versjonskontroll av kode, som dere kan drifte selv. To motorer: znippy (Arrow IPC på én maskin eller en full Apache Iceberg-klynge) eller gix på et vanlig filsystem. Innebygd geo-replikering til en twin; gratis å hoste selv, eller hostet på gunnar.rs.
+- skade: Datalager på den åpne tabellstandarden Apache Iceberg, skrevet i Rust. Katalogen hviler på et statisk søketre med oppslag på nanosekunder og kan bygges inn in-process som én fil; kataloglesninger målt til 492× Nessie og 677× Polaris. SQL via DataFusion.
+- korp: Ett program for å følge og undersøke hele dataveien, og som kan testes automatisk. Hugin følger med på nåtiden: Spark-pipelines, en live FalkorDB-graf, ingest. Munin bærer minnet: Iceberg time-travel, kart, etterforskninger. Leveres som en bootbar appliance.
+- tunnr: Rammeverk for å bygge frittstående nettverksenheter med et minimalt operativsystem. Minimale, distroless OS-images der en Rust-binær kjører som PID 1, network-first: WireGuard-tunnelen er oppe før noen annen pakke, i en VM eller på ekte maskinvare.
 
 ---
 
 ## Front page: Suomi (https://www.ignalina.dk/index.fi.html)
 
-"We love the smell of motherboards in the morning" — emmekä tee muuta kuin premium-ohjelmistoja. Olemme puhtaasti skandinaavinen yritys. Sovelluksemme toimitetaan open sourcena, SaaS-palveluna ja hardware-applianceina.
+Infrastruktuuriohjelmistoja, joita ylläpidätte ja hallitsette itse.
 
-SaaS-ratkaisumme toimivat suomalaisella ydinvoimalla.
+Ignalina ApS on skandinaavinen ohjelmistoyritys, jonka kotipaikka on Tanska. Kehitämme Rustilla infrastruktuuriohjelmistoja organisaatioille, jotka haluavat ylläpitää järjestelmiään itse, myös suljetuissa verkoissa. Ohjelmistomme toimitetaan avoimena lähdekoodina, SaaS-palveluna ja hardware-applianceina.
 
-- holger: Immutable artifact repository puhtaalla Rustilla. Peilaa internetistä, Nexuksesta tai Artifactorysta muuttumattomiin znippy-arkistoihin air-gapped-ympäristöihin: content-addressed Blake3:lla, O(1) random access tiedostoihin, 2 MB RSS.
-- znippy: Rinnakkainen random access -arkisto Apache Arrow IPC:n päällä. Pakkaa hakemiston kaikkien ytimien nopeudella ja hakee yksittäisen tiedoston purkamatta muuta; indeksiä voi kysellä suoraan DuckDB:stä, Polarsista tai DataFusionista.
-- gunnar: Git-palvelin Rustilla Apache Arrown päällä. Kaksi moottoria: znippy (Arrow IPC yhdellä koneella tai täysi Apache Iceberg -klusteri) tai gix tavallisella tiedostojärjestelmällä. Sisäänrakennettu geo-replikointi twinille; ilmainen isännöidä itse, tai isännöitynä gunnar.rs:ssä.
-- skade: Apache Iceberg puhtaalla Rustilla. Katalogi perustuu staattiseen hakupuuhun, jonka haut kestävät nanosekunteja, ja se upotetaan in-process yhtenä tiedostona; katalogiluvut mitattu 492× Nessieen ja 677× Polarikseen verrattuna. SQL DataFusionin kautta.
-- korp: Yksi robotilla testattava egui-sovellus koko datapolun yli. Hugin valvoo nykyhetkeä: Spark-pipelinet, live FalkorDB-graafi, ingest. Munin kantaa muistia: Iceberg time-travel, kartat, tutkinnat. Toimitetaan käynnistettävänä appliancena.
-- tunnr: Bare-metal-appliance-kehys. Minimaaliset, distroless OS-imaget, joissa Rust-binääri ajetaan PID 1:nä, network-first: WireGuard-tunneli on ylhäällä ennen yhtäkään muuta pakettia, virtuaalikoneessa tai oikealla raudalla.
+- holger: Ohjelmistopakettien varasto, jonka sisältöä ei voi muuttaa jälkikäteen, myös verkkoihin ilman internetyhteyttä. Peilaa internetistä, Nexuksesta tai Artifactorysta muuttumattomiin znippy-arkistoihin air-gapped-ympäristöihin: content-addressed Blake3:lla, O(1) random access tiedostoihin, 2 MB RSS.
+- znippy: Arkistomuoto suurille datamäärille, rakennettu avoimen Apache Arrow -standardin päälle. Pakkaa hakemiston kaikkien ytimien nopeudella ja hakee yksittäisen tiedoston purkamatta muuta; indeksiä voi kysellä suoraan DuckDB:stä, Polarsista tai DataFusionista.
+- gunnar: Git-palvelin koodin versionhallintaan, ylläpidettävissä itse. Kaksi moottoria: znippy (Arrow IPC yhdellä koneella tai täysi Apache Iceberg -klusteri) tai gix tavallisella tiedostojärjestelmällä. Sisäänrakennettu geo-replikointi twinille; ilmainen isännöidä itse, tai isännöitynä gunnar.rs:ssä.
+- skade: Datavarasto avoimen Apache Iceberg -taulustandardin päällä, kirjoitettu Rustilla. Katalogi perustuu staattiseen hakupuuhun, jonka haut kestävät nanosekunteja, ja se upotetaan in-process yhtenä tiedostona; katalogiluvut mitattu 492× Nessieen ja 677× Polarikseen verrattuna. SQL DataFusionin kautta.
+- korp: Yksi sovellus koko datapolun seurantaan ja tutkimiseen, automaattisesti testattava. Hugin valvoo nykyhetkeä: Spark-pipelinet, live FalkorDB-graafi, ingest. Munin kantaa muistia: Iceberg time-travel, kartat, tutkinnat. Toimitetaan käynnistettävänä appliancena.
+- tunnr: Kehys itsenäisten verkkolaitteiden rakentamiseen minimaalisella käyttöjärjestelmällä. Minimaaliset, distroless OS-imaget, joissa Rust-binääri ajetaan PID 1:nä, network-first: WireGuard-tunneli on ylhäällä ennen yhtäkään muuta pakettia, virtuaalikoneessa tai oikealla raudalla.
 
 ---
 
 ## Front page: Íslenska (https://www.ignalina.dk/index.is.html)
 
-"We love the smell of motherboards in the morning" — og við gerum ekkert nema premium-hugbúnað. Við erum hreinræktað skandinavískt fyrirtæki. Forritin okkar eru afhent sem open source, sem SaaS og sem hardware-appliances.
+Innviðahugbúnaður sem þið rekið og stjórnið sjálf.
 
-SaaS-lausnirnar okkar keyra á finnskri kjarnorku.
+Ignalina ApS er skandinavískt hugbúnaðarfyrirtæki með aðsetur í Danmörku. Við þróum innviðahugbúnað í Rust fyrir stofnanir sem vilja reka kerfi sín sjálfar, einnig á lokuðum netum. Hugbúnaðurinn okkar er afhentur sem opinn kóði, sem SaaS og sem hardware-appliances.
 
-- holger: Immutable artifact repository í hreinu Rust. Speglar frá internetinu, Nexus eða Artifactory yfir í óbreytanleg znippy-söfn fyrir air-gapped umhverfi: content-addressed með Blake3, O(1) random access að skrám, 2 MB RSS.
-- znippy: Samhliða safn með random access, byggt á Apache Arrow IPC. Pakkar möppu á fullum hraða allra kjarna og sækir staka skrá án þess að afpakka restina; hægt er að spyrja vísinn beint úr DuckDB, Polars eða DataFusion.
-- gunnar: Git-þjónn í Rust á Apache Arrow. Tvær vélar: znippy (Arrow IPC á einni vél, eða heill Apache Iceberg-klasi) eða gix á venjulegu skráakerfi. Innbyggð geo-replication til twin; ókeypis að hýsa sjálfur, eða hýst á gunnar.rs.
-- skade: Apache Iceberg í hreinu Rust. Katalogurinn hvílir á kyrrstæðu leitartré með uppflettingum á nanósekúndum og er felldur inn in-process sem ein skrá; lestur úr katalog mældur 492× Nessie og 677× Polaris. SQL í gegnum DataFusion.
-- korp: Eitt egui-forrit, prófanlegt með vélmennum, yfir alla gagnaleiðina. Hugin vakir yfir núinu: Spark-pipelines, lifandi FalkorDB-graf, ingest. Munin geymir minnið: Iceberg time-travel, kort, rannsóknir. Afhent sem ræsanlegt appliance.
-- tunnr: Rammi fyrir bare-metal appliances. Lágmarks, distroless OS-images þar sem Rust-forrit keyrir sem PID 1, network-first: WireGuard-göngin eru uppi á undan öllum öðrum pökkum, í sýndarvél eða á raunverulegum vélbúnaði.
+- holger: Geymsla fyrir hugbúnaðarpakka sem ekki er hægt að breyta eftir á, einnig fyrir net án internets. Speglar frá internetinu, Nexus eða Artifactory yfir í óbreytanleg znippy-söfn fyrir air-gapped umhverfi: content-addressed með Blake3, O(1) random access að skrám, 2 MB RSS.
+- znippy: Safnsnið fyrir mikið gagnamagn, byggt á opna staðlinum Apache Arrow. Pakkar möppu á fullum hraða allra kjarna og sækir staka skrá án þess að afpakka restina; hægt er að spyrja vísinn beint úr DuckDB, Polars eða DataFusion.
+- gunnar: Git-þjónn fyrir útgáfustýringu kóða, sem þið getið rekið sjálf. Tvær vélar: znippy (Arrow IPC á einni vél, eða heill Apache Iceberg-klasi) eða gix á venjulegu skráakerfi. Innbyggð geo-replication til twin; ókeypis að hýsa sjálfur, eða hýst á gunnar.rs.
+- skade: Gagnageymsla byggð á opna töflustaðlinum Apache Iceberg, skrifuð í Rust. Katalogurinn hvílir á kyrrstæðu leitartré með uppflettingum á nanósekúndum og er felldur inn in-process sem ein skrá; lestur úr katalog mældur 492× Nessie og 677× Polaris. SQL í gegnum DataFusion.
+- korp: Eitt forrit til að fylgjast með og rannsaka alla gagnaleiðina, prófanlegt sjálfvirkt. Hugin vakir yfir núinu: Spark-pipelines, lifandi FalkorDB-graf, ingest. Munin geymir minnið: Iceberg time-travel, kort, rannsóknir. Afhent sem ræsanlegt appliance.
+- tunnr: Rammi til að smíða sjálfstæð nettæki með lágmarksstýrikerfi. Lágmarks, distroless OS-images þar sem Rust-forrit keyrir sem PID 1, network-first: WireGuard-göngin eru uppi á undan öllum öðrum pökkum, í sýndarvél eða á raunverulegum vélbúnaði.
 
 ---
 
 ## Front page: 日本語 (https://www.ignalina.dk/index.ja.html)
 
-"We love the smell of motherboards in the morning" — そして私たちが作るのはプレミアムなソフトウェアだけです。私たちは純粋なスカンジナビアの企業です。アプリケーションはオープンソース、SaaS、ハードウェアアプライアンスとして提供しています。
+自ら運用し、自ら管理できる基盤ソフトウェア。
 
-私たちの SaaS ソリューションはフィンランドの原子力で動いています。
+Ignalina ApS はデンマークを拠点とするスカンジナビアのソフトウェア企業です。自らシステムを運用したい組織に向けて、閉域網での運用も含め、基盤ソフトウェアを Rust で開発しています。オープンソース、SaaS、ハードウェアアプライアンスとして提供しています。
 
-- holger: 純 Rust 製の immutable artifact repository。 インターネット、Nexus、Artifactory からミラーし、air-gapped 環境向けの不変な znippy アーカイブに収めます。Blake3 による content-addressed、ファイルへの O(1) random access、RSS はわずか 2 MB。
-- znippy: Apache Arrow IPC 上の、random access 可能な並列アーカイブ。 全コアの速度でディレクトリをパックし、残りを展開せずに任意の 1 ファイルだけを取り出せます。インデックスは DuckDB、Polars、DataFusion から直接クエリできます。
-- gunnar: Apache Arrow 上の Rust 製 Git サーバー。 2 つのエンジン:znippy(1 台のマシン上の Arrow IPC、または本格的な Apache Iceberg クラスター)、または通常のファイルシステム上の gix。twin への geo-replication を内蔵。セルフホストは無料、または gunnar.rs でホスティング。
-- skade: 純 Rust 製の Apache Iceberg。 カタログはナノ秒単位で引ける静的な探索木の上にあり、1 ファイルとして in-process に組み込めます。カタログ読み取りは Nessie の 492 倍、Polaris の 677 倍を計測。SQL は DataFusion 経由。
-- korp: データ経路全体をカバーする、ロボットでテスト可能な egui アプリ。 Hugin は「今」を見張ります:Spark pipelines、ライブの FalkorDB グラフ、ingest。Munin は記憶を担います:Iceberg time-travel、地図、調査。起動可能なアプライアンスとして提供。
-- tunnr: bare-metal アプライアンスのためのフレームワーク。 Rust バイナリが PID 1 として動く、最小限の distroless OS イメージ。network-first:ほかのどのパケットよりも先に WireGuard トンネルが立ち上がります。VM でも実機でも。
+- holger: 後から変更できないソフトウェアパッケージの保管庫。インターネットのないネットワークにも対応します。 インターネット、Nexus、Artifactory からミラーし、air-gapped 環境向けの不変な znippy アーカイブに収めます。Blake3 による content-addressed、ファイルへの O(1) random access、RSS はわずか 2 MB。
+- znippy: 大量のデータ向けのアーカイブ形式。オープン標準の Apache Arrow を基盤としています。 全コアの速度でディレクトリをパックし、残りを展開せずに任意の 1 ファイルだけを取り出せます。インデックスは DuckDB、Polars、DataFusion から直接クエリできます。
+- gunnar: 自組織で運用できる、コードのバージョン管理用 Git サーバー。 2 つのエンジン:znippy(1 台のマシン上の Arrow IPC、または本格的な Apache Iceberg クラスター)、または通常のファイルシステム上の gix。twin への geo-replication を内蔵。セルフホストは無料、または gunnar.rs でホスティング。
+- skade: オープンなテーブル標準 Apache Iceberg に基づくデータストア。Rust で書かれています。 カタログはナノ秒単位で引ける静的な探索木の上にあり、1 ファイルとして in-process に組み込めます。カタログ読み取りは Nessie の 492 倍、Polaris の 677 倍を計測。SQL は DataFusion 経由。
+- korp: データ経路全体を監視・調査できる単一のアプリケーション。自動テストに対応します。 Hugin は「今」を見張ります:Spark pipelines、ライブの FalkorDB グラフ、ingest。Munin は記憶を担います:Iceberg time-travel、地図、調査。起動可能なアプライアンスとして提供。
+- tunnr: 最小限の OS を備えた独立型ネットワーク機器を構築するためのフレームワーク。 Rust バイナリが PID 1 として動く、最小限の distroless OS イメージ。network-first:ほかのどのパケットよりも先に WireGuard トンネルが立ち上がります。VM でも実機でも。
 
 ---
 

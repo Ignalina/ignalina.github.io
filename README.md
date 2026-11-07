@@ -1,11 +1,11 @@
 # www.ignalina.dk
 
-The front page of Ignalina ApS, in five languages. Built with Astro, Tailwind and
+The front page of Ignalina ApS, in six languages. Built with Astro, Tailwind and
 Preact, the same stack as vetra.se.
 
 - `src/data/content.ts` holds every word on the site, per language. Change the
   text there and nowhere else.
-- `src/components/Page.astro` is the page; the five files in `src/pages/` only
+- `src/components/Page.astro` is the page; the six `index*` files in `src/pages/` only
   pick the language. `Layout.astro` carries the metadata: titles, descriptions,
   hreflang, Open Graph and the structured data.
 - `src/content/blog/` holds the posts as Markdown. A verbatim copy of a vetra.se
